@@ -97,6 +97,118 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // ── 24/7 Helpline Chat Widget ─────────────────────
+  (function initChat() {
+    const fab     = document.getElementById('chatFab');
+    const panel   = document.getElementById('chatPanel');
+    const badge   = document.getElementById('chatBadge');
+    const label   = document.getElementById('chatLabel');
+    const msgs    = document.getElementById('chatMessages');
+    const input   = document.getElementById('chatInput');
+    const sendBtn = document.getElementById('chatSend');
+    const chips   = document.getElementById('chatChips');
+    if (!fab || !panel) return;
+
+    // Auto-responses keyed to user keywords
+    const autoReplies = [
+      { test: /book|reserv|rental/i,   reply: 'Sure! You can manage your booking at any time from our website. Would you like me to redirect you to the booking page, or is there something specific you need help with?' },
+      { test: /roadside|breakdown|tow|flat|tire|accident/i, reply: 'I understand — roadside assistance is available 24×7. Please call our emergency line at 1-800-DRIVE-99 and a team member will be with you within 30 minutes.' },
+      { test: /cancel|refund/i,        reply: 'Cancellations made 48+ hours before pickup are fully refunded. You can cancel via "Manage Booking" on the site, or I can escalate this to a live agent right now.' },
+      { test: /rate|price|cost|fee|cheap/i, reply: 'Our rates start from $39/day for economy cars with no hidden fees. Check our live deals page for current promotions and up to 30% off weekly rentals!' },
+      { test: /location|airport|pickup|drop/i, reply: 'We have 500+ pickup locations across all 50 states including all major airports. Visit the Locations page to find the nearest spot to you.' },
+      { test: /hi|hello|hey|good/i,    reply: 'Hello! Great to hear from you. How can I help you today? You can ask about bookings, rates, locations, or roadside assistance.' },
+    ];
+    const fallback = "Thanks for reaching out! A live support agent will follow up with you shortly. For urgent matters please call 1-800-DRIVE-99 (available 24×7).";
+
+    function nowTime() {
+      return new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+    }
+
+    function appendMsg(text, type) {
+      const wrap = document.createElement('div');
+      wrap.className = 'chat-msg chat-msg--' + type;
+      const bubble = document.createElement('div');
+      bubble.className = 'chat-bubble';
+      bubble.textContent = text;
+      const time = document.createElement('span');
+      time.className = 'chat-msg-time';
+      time.textContent = nowTime();
+      wrap.appendChild(bubble);
+      wrap.appendChild(time);
+      msgs.appendChild(wrap);
+      msgs.scrollTop = msgs.scrollHeight;
+      return wrap;
+    }
+
+    function showTyping() {
+      const wrap = document.createElement('div');
+      wrap.className = 'chat-msg chat-msg--agent';
+      wrap.innerHTML = '<div class="chat-bubble"><div class="chat-typing"><span></span><span></span><span></span></div></div>';
+      msgs.appendChild(wrap);
+      msgs.scrollTop = msgs.scrollHeight;
+      return wrap;
+    }
+
+    function agentReply(userText) {
+      const typing = showTyping();
+      const matched = autoReplies.find(r => r.test.test(userText));
+      setTimeout(() => {
+        typing.remove();
+        appendMsg(matched ? matched.reply : fallback, 'agent');
+      }, 900 + Math.random() * 400);
+    }
+
+    function sendMessage(text) {
+      text = text.trim();
+      if (!text) return;
+      appendMsg(text, 'user');
+      input.value = '';
+      input.style.height = '';
+      agentReply(text);
+    }
+
+    // Toggle open / close
+    fab.addEventListener('click', () => {
+      const isOpen = panel.classList.toggle('is-open');
+      fab.classList.toggle('is-open', isOpen);
+      fab.setAttribute('aria-expanded', isOpen);
+      panel.setAttribute('aria-hidden', !isOpen);
+      if (isOpen) {
+        badge.classList.add('hidden');
+        label.classList.add('hidden');
+        input.focus();
+      } else {
+        label.classList.remove('hidden');
+      }
+    });
+
+    // Quick reply chips
+    chips.addEventListener('click', e => {
+      const chip = e.target.closest('.chat-chip');
+      if (!chip) return;
+      sendMessage(chip.dataset.reply);
+      // remove chips after first use so panel stays clean
+      chips.style.display = 'none';
+    });
+
+    // Send button
+    sendBtn.addEventListener('click', () => sendMessage(input.value));
+
+    // Enter to send (Shift+Enter = newline)
+    input.addEventListener('keydown', e => {
+      if (e.key === 'Enter' && !e.shiftKey) {
+        e.preventDefault();
+        sendMessage(input.value);
+      }
+    });
+
+    // Auto-grow textarea
+    input.addEventListener('input', () => {
+      input.style.height = 'auto';
+      input.style.height = Math.min(input.scrollHeight, 80) + 'px';
+    });
+  })();
+
   // ── Toast helper ─────────────────────────────────
   window.showToast = function(msg, duration = 3000) {
     let toast = document.getElementById('globalToast');
