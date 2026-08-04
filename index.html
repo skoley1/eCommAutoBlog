@@ -29,8 +29,12 @@
       <li><a href="contact.html">Contact</a></li>
     </ul>
     <div class="navbar-actions">
-      <a href="deals.html" class="btn btn-ghost btn-sm">View Deals</a>
-      <a href="#search" class="btn btn-primary btn-sm">Book Now</a>
+      <div class="lang-switcher">
+        <button class="lang-btn active" data-lang="en">🇺🇸 EN</button>
+        <button class="lang-btn" data-lang="de">🇩🇪 DE</button>
+      </div>
+      <a href="deals.html" class="btn btn-ghost btn-sm" data-i18n="nav_view_deals">View Deals</a>
+      <a href="#search" class="btn btn-primary btn-sm" data-i18n="nav_book_now">Book Now</a>
     </div>
     <button class="menu-toggle" aria-label="Menu">
       <span></span><span></span><span></span>
@@ -133,9 +137,9 @@
 <!-- FLEET PREVIEW -->
 <section class="section">
   <div class="container">
-    <span class="section-tag">Our Fleet</span>
-    <h2 class="section-title">Cars for Every Journey</h2>
-    <p class="section-sub">All vehicles are late-model, fully insured, and road-ready. Pick up or delivered to your door.</p>
+    <span class="section-tag" data-i18n="fleet_tag">Our Fleet</span>
+    <h2 class="section-title" data-i18n="fleet_title">Cars for Every Journey</h2>
+    <p class="section-sub" data-i18n="fleet_sub">All vehicles are late-model, fully insured, and road-ready. Pick up or delivered to your door.</p>
     <div class="fleet-grid">
 
       <div class="car-card" data-category="economy" data-price="39">
@@ -246,7 +250,7 @@
 
     </div>
     <div style="text-align:center;margin-top:32px">
-      <a href="cars.html" class="btn btn-ghost btn-lg">View All Cars →</a>
+      <a href="cars.html" class="btn btn-ghost btn-lg" data-i18n="fleet_view_all">View All Cars →</a>
     </div>
   </div>
 </section>
@@ -254,39 +258,39 @@
 <!-- FEATURES -->
 <section class="section section--gray">
   <div class="container">
-    <span class="section-tag">Why DriveAway</span>
-    <h2 class="section-title">Built for American Road Trips</h2>
-    <p class="section-sub">Trusted by millions of drivers every year for transparent pricing and reliable vehicles.</p>
+    <span class="section-tag" data-i18n="feat_tag">Why DriveAway</span>
+    <h2 class="section-title" data-i18n="feat_title">Built for American Road Trips</h2>
+    <p class="section-sub" data-i18n="feat_sub">Trusted by millions of drivers every year for transparent pricing and reliable vehicles.</p>
     <div class="grid-3">
       <div class="feature-card">
         <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg></div>
-        <div class="feature-title">Fully Insured Fleet</div>
-        <div class="feature-desc">Every vehicle comes with state-minimum liability coverage. Optional collision damage waivers available at checkout.</div>
+        <div class="feature-title" data-i18n="feat_insured_t">Fully Insured Fleet</div>
+        <div class="feature-desc" data-i18n="feat_insured_d">Every vehicle comes with state-minimum liability coverage. Optional collision damage waivers available at checkout.</div>
       </div>
       <div class="feature-card">
         <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
-        <div class="feature-title">Transparent Pricing</div>
-        <div class="feature-desc">The price you see is the price you pay. No surprise airport surcharges or mandatory add-ons.</div>
+        <div class="feature-title" data-i18n="feat_price_t">Transparent Pricing</div>
+        <div class="feature-desc" data-i18n="feat_price_d">The price you see is the price you pay. No surprise airport surcharges or mandatory add-ons.</div>
       </div>
       <div class="feature-card">
         <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg></div>
-        <div class="feature-title">Instant Confirmation</div>
-        <div class="feature-desc">Book in under 2 minutes. Receive your rental voucher immediately by email and SMS.</div>
+        <div class="feature-title" data-i18n="feat_instant_t">Instant Confirmation</div>
+        <div class="feature-desc" data-i18n="feat_instant_d">Book in under 2 minutes. Receive your rental voucher immediately by email and SMS.</div>
       </div>
       <div class="feature-card">
         <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
-        <div class="feature-title">24/7 Roadside Support</div>
-        <div class="feature-desc">Around-the-clock phone, chat, and app support including roadside assistance in all 50 states.</div>
+        <div class="feature-title" data-i18n="feat_support_t">24/7 Roadside Support</div>
+        <div class="feature-desc" data-i18n="feat_support_d">Around-the-clock phone, chat, and app support including roadside assistance in all 50 states.</div>
       </div>
       <div class="feature-card">
         <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/></svg></div>
-        <div class="feature-title">Flexible Payment</div>
-        <div class="feature-desc">Pay now for the best rate or reserve free and pay at pickup. All major credit and debit cards accepted.</div>
+        <div class="feature-title" data-i18n="feat_payment_t">Flexible Payment</div>
+        <div class="feature-desc" data-i18n="feat_payment_d">Pay now for the best rate or reserve free and pay at pickup. All major credit and debit cards accepted.</div>
       </div>
       <div class="feature-card">
         <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-1.447-.894L15 9m0 8V9m0 0L9 7"/></svg></div>
-        <div class="feature-title">One-Way Rentals</div>
-        <div class="feature-desc">Pick up in one city, drop off in another. Perfect for cross-country drives with no backtracking.</div>
+        <div class="feature-title" data-i18n="feat_oneway_t">One-Way Rentals</div>
+        <div class="feature-desc" data-i18n="feat_oneway_d">Pick up in one city, drop off in another. Perfect for cross-country drives with no backtracking.</div>
       </div>
     </div>
   </div>
@@ -295,14 +299,14 @@
 <!-- HOW IT WORKS -->
 <section class="section">
   <div class="container">
-    <span class="section-tag">How It Works</span>
-    <h2 class="section-title">Keys in Hand in 4 Easy Steps</h2>
-    <p class="section-sub">From search to road — the whole process takes minutes.</p>
+    <span class="section-tag" data-i18n="steps_tag">How It Works</span>
+    <h2 class="section-title" data-i18n="steps_title">Keys in Hand in 4 Easy Steps</h2>
+    <p class="section-sub" data-i18n="steps_sub">From search to road — the whole process takes minutes.</p>
     <div class="steps-grid">
-      <div class="step-card"><div class="step-num">1</div><div class="step-title">Search</div><div class="step-desc">Enter your pickup city, dates, and preferred car class to see live availability.</div></div>
-      <div class="step-card"><div class="step-num">2</div><div class="step-title">Choose</div><div class="step-desc">Compare cars side by side with full specs, photos, and all-inclusive pricing.</div></div>
-      <div class="step-card"><div class="step-num">3</div><div class="step-title">Book</div><div class="step-desc">Secure your reservation in seconds. No account required for guests.</div></div>
-      <div class="step-card"><div class="step-num">4</div><div class="step-title">Drive</div><div class="step-desc">Show your voucher at the counter, grab the keys, and hit the open road.</div></div>
+      <div class="step-card"><div class="step-num">1</div><div class="step-title" data-i18n="step1_title">Search</div><div class="step-desc" data-i18n="step1_desc">Enter your pickup city, dates, and preferred car class to see live availability.</div></div>
+      <div class="step-card"><div class="step-num">2</div><div class="step-title" data-i18n="step2_title">Choose</div><div class="step-desc" data-i18n="step2_desc">Compare cars side by side with full specs, photos, and all-inclusive pricing.</div></div>
+      <div class="step-card"><div class="step-num">3</div><div class="step-title" data-i18n="step3_title">Book</div><div class="step-desc" data-i18n="step3_desc">Secure your reservation in seconds. No account required for guests.</div></div>
+      <div class="step-card"><div class="step-num">4</div><div class="step-title" data-i18n="step4_title">Drive</div><div class="step-desc" data-i18n="step4_desc">Show your voucher at the counter, grab the keys, and hit the open road.</div></div>
     </div>
   </div>
 </section>
@@ -310,9 +314,9 @@
 <!-- REVIEWS -->
 <section class="section section--gray">
   <div class="container">
-    <span class="section-tag">Customer Reviews</span>
-    <h2 class="section-title">Trusted by Real Drivers</h2>
-    <p class="section-sub">120,000+ verified reviews. Average rating 4.8 out of 5 stars.</p>
+    <span class="section-tag" data-i18n="reviews_tag">Customer Reviews</span>
+    <h2 class="section-title" data-i18n="reviews_title">Trusted by Real Drivers</h2>
+    <p class="section-sub" data-i18n="reviews_sub">120,000+ verified reviews. Average rating 4.8 out of 5 stars.</p>
     <div class="grid-3">
       <div class="review-card"><div class="stars">★★★★★</div><p class="review-text">"Picked up a Tesla Model 3 at LAX — seamless process, no up-selling, and the car was spotless. Will absolutely book again."</p><div class="reviewer"><div class="reviewer-avatar">JM</div><div><div class="reviewer-name">James M.</div><div class="reviewer-loc">Los Angeles, CA</div></div></div></div>
       <div class="review-card"><div class="stars">★★★★★</div><p class="review-text">"Rented an F-150 for a move from Denver to Phoenix. One-way rental was super affordable and pickup/drop-off was completely hassle-free."</p><div class="reviewer"><div class="reviewer-avatar">SR</div><div><div class="reviewer-name">Sarah R.</div><div class="reviewer-loc">Denver, CO</div></div></div></div>
@@ -324,9 +328,9 @@
 <!-- POPULAR LOCATIONS -->
 <section class="section">
   <div class="container">
-    <span class="section-tag">Top Locations</span>
-    <h2 class="section-title">Available Nationwide</h2>
-    <p class="section-sub">Pickup at major airports, downtown hubs, and train stations across all 50 states.</p>
+    <span class="section-tag" data-i18n="locs_tag">Top Locations</span>
+    <h2 class="section-title" data-i18n="locs_title">Available Nationwide</h2>
+    <p class="section-sub" data-i18n="locs_sub">Pickup at major airports, downtown hubs, and train stations across all 50 states.</p>
     <div class="grid-4">
       <div class="loc-card"><div class="loc-icon">✈</div><div class="loc-state">NY</div><div class="loc-city">New York</div><div class="loc-spots">JFK · LGA · EWR · Midtown</div></div>
       <div class="loc-card"><div class="loc-icon">✈</div><div class="loc-state">CA</div><div class="loc-city">Los Angeles</div><div class="loc-spots">LAX · Burbank · Long Beach</div></div>
@@ -338,7 +342,7 @@
       <div class="loc-card"><div class="loc-icon">✈</div><div class="loc-state">CO</div><div class="loc-city">Denver</div><div class="loc-spots">DEN · Downtown · Boulder</div></div>
     </div>
     <div style="text-align:center;margin-top:28px">
-      <a href="locations.html" class="btn btn-ghost btn-lg">See All 500+ Locations →</a>
+      <a href="locations.html" class="btn btn-ghost btn-lg" data-i18n="locs_view_all">See All 500+ Locations →</a>
     </div>
   </div>
 </section>
@@ -346,11 +350,11 @@
 <!-- CTA BANNER -->
 <div class="cta-banner">
   <div class="container">
-    <h2>Ready to Hit the Road?</h2>
-    <p>Summer deals active — save up to 30% on weekly rentals nationwide.</p>
+    <h2 data-i18n="cta_title">Ready to Hit the Road?</h2>
+    <p data-i18n="cta_sub">Summer deals active — save up to 30% on weekly rentals nationwide.</p>
     <div class="cta-actions">
-      <a href="#search" class="btn btn-primary btn-lg">Book Your Car</a>
-      <a href="deals.html" class="btn btn-outline btn-lg">View All Deals</a>
+      <a href="#search" class="btn btn-primary btn-lg" data-i18n="cta_book">Book Your Car</a>
+      <a href="deals.html" class="btn btn-outline btn-lg" data-i18n="cta_deals">View All Deals</a>
     </div>
   </div>
 </div>
@@ -361,7 +365,7 @@
     <div class="footer-grid">
       <div>
         <div class="footer-logo">Drive<span>Away</span></div>
-        <p class="footer-tagline">America's most transparent car rental service.<br>500+ locations. All 50 states.</p>
+        <p class="footer-tagline" data-i18n="footer_tagline" data-i18n-html>America's most transparent car rental service.<br>500+ locations. All 50 states.</p>
         <div class="footer-socials">
           <a href="#" class="footer-social">f</a>
           <a href="#" class="footer-social">X</a>
@@ -369,40 +373,41 @@
           <a href="#" class="footer-social">▶</a>
         </div>
       </div>
-      <div class="footer-col"><h4>Rent</h4><ul>
-        <li><a href="cars.html">Economy Cars</a></li>
-        <li><a href="cars.html">SUVs &amp; Crossovers</a></li>
-        <li><a href="cars.html">Luxury Vehicles</a></li>
-        <li><a href="cars.html">Electric Cars</a></li>
-        <li><a href="cars.html">Pickup Trucks</a></li>
-        <li><a href="cars.html">Vans &amp; Minivans</a></li>
+      <div class="footer-col"><h4 data-i18n="footer_rent">Rent</h4><ul>
+        <li><a href="cars.html" data-i18n="footer_economy">Economy Cars</a></li>
+        <li><a href="cars.html" data-i18n="footer_suvs">SUVs &amp; Crossovers</a></li>
+        <li><a href="cars.html" data-i18n="footer_luxury">Luxury Vehicles</a></li>
+        <li><a href="cars.html" data-i18n="footer_electric">Electric Cars</a></li>
+        <li><a href="cars.html" data-i18n="footer_trucks">Pickup Trucks</a></li>
+        <li><a href="cars.html" data-i18n="footer_vans">Vans &amp; Minivans</a></li>
       </ul></div>
-      <div class="footer-col"><h4>Company</h4><ul>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="about.html">Careers</a></li>
-        <li><a href="about.html">Press</a></li>
-        <li><a href="contact.html">Partner Program</a></li>
-        <li><a href="contact.html">Corporate Rental</a></li>
+      <div class="footer-col"><h4 data-i18n="footer_company">Company</h4><ul>
+        <li><a href="about.html" data-i18n="footer_about">About Us</a></li>
+        <li><a href="about.html" data-i18n="footer_careers">Careers</a></li>
+        <li><a href="about.html" data-i18n="footer_press">Press</a></li>
+        <li><a href="contact.html" data-i18n="footer_partner">Partner Program</a></li>
+        <li><a href="contact.html" data-i18n="footer_corporate">Corporate Rental</a></li>
       </ul></div>
-      <div class="footer-col"><h4>Support</h4><ul>
-        <li><a href="contact.html">Help Center</a></li>
-        <li><a href="contact.html">Manage Booking</a></li>
-        <li><a href="contact.html">Roadside Assist</a></li>
-        <li><a href="contact.html">Accessibility</a></li>
-        <li><a href="#">Privacy Policy</a></li>
-        <li><a href="#">Terms of Use</a></li>
+      <div class="footer-col"><h4 data-i18n="footer_support">Support</h4><ul>
+        <li><a href="contact.html" data-i18n="footer_help">Help Center</a></li>
+        <li><a href="contact.html" data-i18n="footer_booking">Manage Booking</a></li>
+        <li><a href="contact.html" data-i18n="footer_roadside">Roadside Assist</a></li>
+        <li><a href="contact.html" data-i18n="footer_access">Accessibility</a></li>
+        <li><a href="#" data-i18n="footer_privacy">Privacy Policy</a></li>
+        <li><a href="#" data-i18n="footer_terms">Terms of Use</a></li>
       </ul></div>
     </div>
     <div class="footer-bottom">
-      <span>&copy; 2025 DriveAway, Inc. All rights reserved.</span>
+      <span data-i18n="footer_copy">&copy; 2025 DriveAway, Inc. All rights reserved.</span>
       <div class="footer-legal">
         <a href="#">Privacy</a><a href="#">Terms</a><a href="#">Sitemap</a>
-        <span>DOT Registered &nbsp;|&nbsp; BBB Accredited</span>
+        <span data-i18n="footer_legal">DOT Registered &nbsp;|&nbsp; BBB Accredited</span>
       </div>
     </div>
   </div>
 </footer>
 
+<script src="js/i18n.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

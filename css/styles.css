@@ -748,3 +748,33 @@ button { cursor: pointer; font-family: inherit; }
   .menu-toggle { display: flex; }
   .form-row { grid-template-columns: 1fr; }
 }
+
+/* ===== LANGUAGE SWITCHER ===== */
+.lang-switcher {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 6px;
+  padding: 2px;
+  margin-left: 8px;
+}
+.lang-btn {
+  padding: 4px 9px;
+  border: none;
+  background: transparent;
+  color: #94a3b8;
+  font-size: 12px;
+  font-weight: 700;
+  border-radius: 4px;
+  cursor: pointer;
+  letter-spacing: 0.4px;
+  transition: background 0.15s, color 0.15s;
+  line-height: 1;
+}
+.lang-btn:hover { color: #fff; }
+.lang-btn.active {
+  background: var(--accent);
+  color: #fff;
+}
+.lang-flag { font-size: 13px; margin-right: 3px; }

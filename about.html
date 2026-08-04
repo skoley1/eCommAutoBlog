@@ -40,16 +40,20 @@
   <div class="container navbar-inner">
     <a href="index.html" class="navbar-logo">Drive<span>Away</span></a>
     <ul class="navbar-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="cars.html">Cars</a></li>
-      <li><a href="locations.html">Locations</a></li>
-      <li><a href="deals.html">Deals</a></li>
-      <li><a href="about.html" class="active">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
+      <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+      <li><a href="cars.html" data-i18n="nav_cars">Cars</a></li>
+      <li><a href="locations.html" data-i18n="nav_locations">Locations</a></li>
+      <li><a href="deals.html" data-i18n="nav_deals">Deals</a></li>
+      <li><a href="about.html" class="active" data-i18n="nav_about">About</a></li>
+      <li><a href="contact.html" data-i18n="nav_contact">Contact</a></li>
     </ul>
     <div class="navbar-actions">
-      <a href="deals.html" class="btn btn-ghost btn-sm">View Deals</a>
-      <a href="index.html#search" class="btn btn-primary btn-sm">Book Now</a>
+      <div class="lang-switcher">
+        <button class="lang-btn active" data-lang="en">🇺🇸 EN</button>
+        <button class="lang-btn" data-lang="de">🇩🇪 DE</button>
+      </div>
+      <a href="deals.html" class="btn btn-ghost btn-sm" data-i18n="nav_view_deals">View Deals</a>
+      <a href="index.html#search" class="btn btn-primary btn-sm" data-i18n="nav_book_now">Book Now</a>
     </div>
     <button class="menu-toggle"><span></span><span></span><span></span></button>
   </div>
@@ -58,13 +62,13 @@
 <!-- PAGE HERO -->
 <div class="page-hero" style="padding-bottom:52px">
   <div class="container">
-    <div class="breadcrumb"><a href="index.html">Home</a><span class="breadcrumb-sep">/</span><span>About</span></div>
+    <div class="breadcrumb"><a href="index.html" data-i18n="nav_home">Home</a><span class="breadcrumb-sep">/</span><span>About</span></div>
     <div class="about-hero-inner">
       <div>
         <h1 style="font-size:40px">We Believe Renting a Car Should Be Simple</h1>
         <p style="color:#94a3b8;font-size:16px;margin-top:12px;max-width:460px">DriveAway was founded on one idea: no surprises. Clear prices, reliable cars, and humans who actually answer the phone.</p>
         <div style="margin-top:24px;display:flex;gap:12px;flex-wrap:wrap">
-          <a href="index.html#search" class="btn btn-primary btn-lg">Book a Car</a>
+          <a href="index.html#search" class="btn btn-primary btn-lg" data-i18n="cta_book">Book a Car</a>
           <a href="contact.html" class="btn btn-outline btn-lg">Contact Us</a>
         </div>
       </div>
@@ -241,14 +245,15 @@
     <p>We're hiring across the US. Check open roles or simply book your next rental today.</p>
     <div class="cta-actions">
       <a href="contact.html" class="btn btn-primary btn-lg">View Careers</a>
-      <a href="index.html#search" class="btn btn-outline btn-lg">Book a Car</a>
+      <a href="index.html#search" class="btn btn-outline btn-lg" data-i18n="cta_book">Book a Car</a>
     </div>
   </div>
 </div>
 
 <!-- FOOTER -->
-<footer class="footer"><div class="container"><div class="footer-grid"><div><div class="footer-logo">Drive<span>Away</span></div><p class="footer-tagline">America's most transparent car rental. 500+ locations. All 50 states.</p></div><div class="footer-col"><h4>Rent</h4><ul><li><a href="cars.html">Economy</a></li><li><a href="cars.html">SUVs</a></li><li><a href="cars.html">Luxury</a></li><li><a href="cars.html">Electric</a></li></ul></div><div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About</a></li><li><a href="contact.html">Careers</a></li><li><a href="contact.html">Press</a></li></ul></div><div class="footer-col"><h4>Support</h4><ul><li><a href="contact.html">Help</a></li><li><a href="#">Privacy</a></li><li><a href="#">Terms</a></li></ul></div></div><div class="footer-bottom"><span>&copy; 2025 DriveAway, Inc.</span><div class="footer-legal"><a href="#">Privacy</a><a href="#">Terms</a></div></div></div></footer>
+<footer class="footer"><div class="container"><div class="footer-grid"><div><div class="footer-logo">Drive<span>Away</span></div><p class="footer-tagline" data-i18n="footer_tagline" data-i18n-html>America's most transparent car rental. 500+ locations. All 50 states.</p></div><div class="footer-col"><h4>Rent</h4><ul><li><a href="cars.html">Economy</a></li><li><a href="cars.html">SUVs</a></li><li><a href="cars.html">Luxury</a></li><li><a href="cars.html">Electric</a></li></ul></div><div class="footer-col"><h4>Company</h4><ul><li><a href="about.html" data-i18n="nav_about">About</a></li><li><a href="contact.html">Careers</a></li><li><a href="contact.html">Press</a></li></ul></div><div class="footer-col"><h4>Support</h4><ul><li><a href="contact.html">Help</a></li><li><a href="#">Privacy</a></li><li><a href="#">Terms</a></li></ul></div></div><div class="footer-bottom"><span>&copy; 2025 DriveAway, Inc.</span><div class="footer-legal"><a href="#">Privacy</a><a href="#">Terms</a></div></div></div></footer>
 
+<script src="js/i18n.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

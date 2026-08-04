@@ -50,16 +50,20 @@
   <div class="container navbar-inner">
     <a href="index.html" class="navbar-logo">Drive<span>Away</span></a>
     <ul class="navbar-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="cars.html">Cars</a></li>
-      <li><a href="locations.html">Locations</a></li>
-      <li><a href="deals.html" class="active">Deals</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
+      <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+      <li><a href="cars.html" data-i18n="nav_cars">Cars</a></li>
+      <li><a href="locations.html" data-i18n="nav_locations">Locations</a></li>
+      <li><a href="deals.html" class="active" data-i18n="nav_deals">Deals</a></li>
+      <li><a href="about.html" data-i18n="nav_about">About</a></li>
+      <li><a href="contact.html" data-i18n="nav_contact">Contact</a></li>
     </ul>
     <div class="navbar-actions">
-      <a href="deals.html" class="btn btn-ghost btn-sm">View Deals</a>
-      <a href="index.html#search" class="btn btn-primary btn-sm">Book Now</a>
+      <div class="lang-switcher">
+        <button class="lang-btn active" data-lang="en">🇺🇸 EN</button>
+        <button class="lang-btn" data-lang="de">🇩🇪 DE</button>
+      </div>
+      <a href="deals.html" class="btn btn-ghost btn-sm" data-i18n="nav_view_deals">View Deals</a>
+      <a href="index.html#search" class="btn btn-primary btn-sm" data-i18n="nav_book_now">Book Now</a>
     </div>
     <button class="menu-toggle"><span></span><span></span><span></span></button>
   </div>
@@ -68,7 +72,7 @@
 <!-- PAGE HERO -->
 <div class="page-hero">
   <div class="container">
-    <div class="breadcrumb"><a href="index.html">Home</a><span class="breadcrumb-sep">/</span><span>Deals</span></div>
+    <div class="breadcrumb"><a href="index.html" data-i18n="nav_home">Home</a><span class="breadcrumb-sep">/</span><span>Deals</span></div>
     <h1>Current Deals &amp; Promos</h1>
     <p>Save up to 40% on rentals. Use a promo code at checkout or book a qualifying rate to unlock savings.</p>
   </div>
@@ -86,7 +90,7 @@
           <div class="featured-deal-discount">30% OFF</div>
           <h2>Summer Road Trip Sale</h2>
           <p>Save 30% on all weekly rentals booked before August 31, 2025. Valid at 500+ US locations. Free unlimited mileage included.</p>
-          <div style="margin-top:14px"><a href="index.html#search" class="btn btn-primary">Book Now</a></div>
+          <div style="margin-top:14px"><a href="index.html#search" class="btn btn-primary" data-i18n="nav_book_now">Book Now</a></div>
           <div class="deal-expires-global">Offer expires Aug 31, 2025 &nbsp;·&nbsp; New bookings only</div>
         </div>
         <div class="featured-deal-code">
@@ -238,14 +242,15 @@
     <p>Browse available cars and apply your promo code at checkout.</p>
     <div class="cta-actions">
       <a href="cars.html" class="btn btn-primary btn-lg">Browse Cars</a>
-      <a href="index.html#search" class="btn btn-outline btn-lg">Book Now</a>
+      <a href="index.html#search" class="btn btn-outline btn-lg" data-i18n="nav_book_now">Book Now</a>
     </div>
   </div>
 </div>
 
 <!-- FOOTER -->
-<footer class="footer"><div class="container"><div class="footer-grid"><div><div class="footer-logo">Drive<span>Away</span></div><p class="footer-tagline">America's most transparent car rental. 500+ locations. All 50 states.</p></div><div class="footer-col"><h4>Rent</h4><ul><li><a href="cars.html">Economy</a></li><li><a href="cars.html">SUVs</a></li><li><a href="cars.html">Luxury</a></li><li><a href="cars.html">Electric</a></li></ul></div><div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About</a></li><li><a href="contact.html">Careers</a></li></ul></div><div class="footer-col"><h4>Support</h4><ul><li><a href="contact.html">Help</a></li><li><a href="#">Privacy</a></li><li><a href="#">Terms</a></li></ul></div></div><div class="footer-bottom"><span>&copy; 2025 DriveAway, Inc.</span><div class="footer-legal"><a href="#">Privacy</a><a href="#">Terms</a></div></div></div></footer>
+<footer class="footer"><div class="container"><div class="footer-grid"><div><div class="footer-logo">Drive<span>Away</span></div><p class="footer-tagline" data-i18n="footer_tagline" data-i18n-html>America's most transparent car rental. 500+ locations. All 50 states.</p></div><div class="footer-col"><h4>Rent</h4><ul><li><a href="cars.html">Economy</a></li><li><a href="cars.html">SUVs</a></li><li><a href="cars.html">Luxury</a></li><li><a href="cars.html">Electric</a></li></ul></div><div class="footer-col"><h4>Company</h4><ul><li><a href="about.html" data-i18n="nav_about">About</a></li><li><a href="contact.html">Careers</a></li></ul></div><div class="footer-col"><h4>Support</h4><ul><li><a href="contact.html">Help</a></li><li><a href="#">Privacy</a></li><li><a href="#">Terms</a></li></ul></div></div><div class="footer-bottom"><span>&copy; 2025 DriveAway, Inc.</span><div class="footer-legal"><a href="#">Privacy</a><a href="#">Terms</a></div></div></div></footer>
 
+<script src="js/i18n.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>
