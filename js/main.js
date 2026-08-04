@@ -1,4 +1,4 @@
-/* ===== DriveAway — Main JS ===== */
+/* ===== RoarAway — Main JS ===== */
 
 document.addEventListener('DOMContentLoaded', () => {
 

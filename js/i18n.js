@@ -1,4 +1,4 @@
-/* ===== DriveAway — i18n (EN / DE) ===== */
+/* ===== RoarAway — i18n (EN / DE) ===== */
 
 const TRANSLATIONS = {
 
@@ -50,7 +50,7 @@ const TRANSLATIONS = {
     per_day:         '/day',
 
     /* ── FEATURES ── */
-    feat_tag:        'Why DriveAway',
+    feat_tag:        'Why RoarAway',
     feat_title:      'Built for American Road Trips',
     feat_sub:        'Trusted by millions of drivers every year for transparent pricing and reliable vehicles.',
     feat_insured_t:  'Fully Insured Fleet',
@@ -133,7 +133,7 @@ const TRANSLATIONS = {
     locs_flight_t:   'Flight Tracking',
     locs_flight_d:   "We monitor your flight. Delayed landing? Your booking adjusts automatically — no fees, no calls needed.",
     locs_return_t:   'Return Anywhere',
-    locs_return_d:   'Drop off at any DriveAway airport or city location. One-way rentals available between all 500+ sites.',
+    locs_return_d:   'Drop off at any RoarAway airport or city location. One-way rentals available between all 500+ sites.',
 
     /* ── DEALS PAGE ── */
     deals_hero_title:'Current Deals & Promos',
@@ -162,10 +162,10 @@ const TRANSLATIONS = {
     about_vals_title:'What We Stand For',
     about_vals_sub:  'Three principles that guide every decision we make as a company.',
     about_team_tag:  'Leadership Team',
-    about_team_title:'The People Behind DriveAway',
+    about_team_title:'The People Behind RoarAway',
     about_team_sub:  'A diverse team of operators, technologists, and road-trip enthusiasts.',
     about_press_tag: 'Press',
-    about_press_title:'DriveAway in the News',
+    about_press_title:'RoarAway in the News',
     about_press_sub: 'Awards, features, and coverage from leading US media outlets.',
 
     /* ── CONTACT PAGE ── */
@@ -188,13 +188,13 @@ const TRANSLATIONS = {
     contact_privacy_link:'Privacy Policy',
     contact_faq_tag: 'FAQ',
     contact_faq_title:'Frequently Asked Questions',
-    contact_faq_sub: 'Quick answers to the most common questions about renting with DriveAway.',
+    contact_faq_sub: 'Quick answers to the most common questions about renting with RoarAway.',
     contact_manage:  "Need to Manage a Booking?",
     contact_manage_d:"Log in to your account or use your booking confirmation number to modify, cancel, or extend your reservation.",
     contact_manage_btn:'Manage My Booking',
     contact_cta_t:   'Still Have Questions?',
     contact_cta_s:   'Our team is available 24/7 by phone and chat — we\'re always happy to help.',
-    contact_cta_btn: 'Call 1-800-DRIVEAWAY',
+    contact_cta_btn: 'Call 1-800-RoarAway',
 
     /* ── FOOTER ── */
     footer_tagline:  "America's most transparent car rental service.<br>500+ locations. All 50 states.",
@@ -218,7 +218,7 @@ const TRANSLATIONS = {
     footer_access:   'Accessibility',
     footer_privacy:  'Privacy Policy',
     footer_terms:    'Terms of Use',
-    footer_copy:     '© 2025 DriveAway, Inc. All rights reserved.',
+    footer_copy:     '© 2026 RoarAway, Inc. All rights reserved.',
     footer_legal:    'DOT Registered | BBB Accredited',
 
     /* ── CTA BANNER (pages) ── */
@@ -233,7 +233,7 @@ const TRANSLATIONS = {
     cta_save_t:      'Ready to Save?',
     cta_save_s:      'Browse available cars and apply your promo code at checkout.',
     cta_browse:      'Browse Cars',
-    cta_join_t:      'Join the DriveAway Family',
+    cta_join_t:      'Join the RoarAway Family',
     cta_join_s:      "We're hiring across the US. Check open roles or simply book your next rental today.",
     cta_careers:     'View Careers',
   },
@@ -288,7 +288,7 @@ const TRANSLATIONS = {
     per_day:         '/Tag',
 
     /* ── FEATURES ── */
-    feat_tag:        'Warum DriveAway',
+    feat_tag:        'Warum RoarAway',
     feat_title:      'Für amerikanische Roadtrips gemacht',
     feat_sub:        'Jedes Jahr von Millionen Fahrern für transparente Preise und zuverlässige Fahrzeuge vertraut.',
     feat_insured_t:  'Vollversicherte Flotte',
@@ -371,7 +371,7 @@ const TRANSLATIONS = {
     locs_flight_t:   'Flugnachverfolgung',
     locs_flight_d:   'Wir überwachen Ihren Flug. Verspätete Landung? Ihre Buchung passt sich automatisch an — keine Gebühren, keine Anrufe nötig.',
     locs_return_t:   'Überall zurückgeben',
-    locs_return_d:   'An jedem DriveAway-Flughafen oder Stadtstandort zurückgeben. Einwegmieten zwischen allen 500+ Standorten verfügbar.',
+    locs_return_d:   'An jedem RoarAway-Flughafen oder Stadtstandort zurückgeben. Einwegmieten zwischen allen 500+ Standorten verfügbar.',
 
     /* ── DEALS PAGE ── */
     deals_hero_title:'Aktuelle Angebote & Aktionen',
@@ -400,10 +400,10 @@ const TRANSLATIONS = {
     about_vals_title:'Wofür wir stehen',
     about_vals_sub:  'Drei Grundsätze, die jede Entscheidung in unserem Unternehmen leiten.',
     about_team_tag:  'Führungsteam',
-    about_team_title:'Die Menschen hinter DriveAway',
+    about_team_title:'Die Menschen hinter RoarAway',
     about_team_sub:  'Ein vielfältiges Team aus Betreibern, Technologen und Roadtrip-Enthusiasten.',
     about_press_tag: 'Presse',
-    about_press_title:'DriveAway in den Medien',
+    about_press_title:'RoarAway in den Medien',
     about_press_sub: 'Auszeichnungen, Features und Berichte von führenden US-Medien.',
 
     /* ── CONTACT PAGE ── */
@@ -426,13 +426,13 @@ const TRANSLATIONS = {
     contact_privacy_link:'Datenschutzrichtlinie',
     contact_faq_tag: 'Häufige Fragen',
     contact_faq_title:'Häufig gestellte Fragen',
-    contact_faq_sub: 'Schnelle Antworten auf die häufigsten Fragen zur Anmietung bei DriveAway.',
+    contact_faq_sub: 'Schnelle Antworten auf die häufigsten Fragen zur Anmietung bei RoarAway.',
     contact_manage:  'Buchung verwalten?',
     contact_manage_d:'Melden Sie sich in Ihrem Konto an oder verwenden Sie Ihre Buchungsbestätigungsnummer, um Ihre Reservierung zu ändern, zu stornieren oder zu verlängern.',
     contact_manage_btn:'Meine Buchung verwalten',
     contact_cta_t:   'Noch Fragen?',
     contact_cta_s:   'Unser Team ist 24/7 per Telefon und Chat erreichbar — wir helfen Ihnen jederzeit gerne.',
-    contact_cta_btn: '1-800-DRIVEAWAY anrufen',
+    contact_cta_btn: '1-800-RoarAway anrufen',
 
     /* ── FOOTER ── */
     footer_tagline:  "Amerikas transparentester Autoverleih.<br>500+ Standorte. Alle 50 Bundesstaaten.",
@@ -456,7 +456,7 @@ const TRANSLATIONS = {
     footer_access:   'Barrierefreiheit',
     footer_privacy:  'Datenschutz',
     footer_terms:    'Nutzungsbedingungen',
-    footer_copy:     '© 2025 DriveAway, Inc. Alle Rechte vorbehalten.',
+    footer_copy:     '© 2025 RoarAway, Inc. Alle Rechte vorbehalten.',
     footer_legal:    'DOT-registriert | BBB-akkreditiert',
 
     /* ── CTA BANNER (pages) ── */
@@ -471,7 +471,7 @@ const TRANSLATIONS = {
     cta_save_t:      'Bereit zum Sparen?',
     cta_save_s:      'Verfügbare Fahrzeuge durchsuchen und Promo-Code an der Kasse eingeben.',
     cta_browse:      'Fahrzeuge durchsuchen',
-    cta_join_t:      'Teil der DriveAway-Familie werden',
+    cta_join_t:      'Teil der RoarAway-Familie werden',
     cta_join_s:      'Wir stellen in den gesamten USA ein. Stellenangebote ansehen oder einfach Ihr nächstes Fahrzeug buchen.',
     cta_careers:     'Karriere ansehen',
   },
@@ -489,7 +489,7 @@ const TRANSLATIONS = {
     search_pickup_lbl:'Lugar de recogida',search_pickup_date:'Fecha y hora de recogida',search_return_date:'Fecha y hora de devolución',search_btn:'Buscar autos →',
     trust_reviews:'4,8 / 5 · Más de 120.000 reseñas',trust_fees:'Sin cargos ocultos',trust_locations:'Más de 500 ubicaciones en EE. UU.',trust_cancel:'Cancelación gratuita',trust_roadside:'Asistencia en carretera 24/7',
     fleet_tag:'Nuestra flota',fleet_title:'Autos para cada viaje',fleet_sub:'Todos los vehículos son modelos recientes, totalmente asegurados y listos para la carretera.',fleet_view_all:'Ver todos los autos →',btn_reserve:'Reservar',per_day:'/día',
-    feat_tag:'Por qué DriveAway',feat_title:'Diseñado para los viajes por carretera en EE. UU.',feat_sub:'Millones de conductores confían en nosotros cada año por precios transparentes y vehículos confiables.',
+    feat_tag:'Por qué RoarAway',feat_title:'Diseñado para los viajes por carretera en EE. UU.',feat_sub:'Millones de conductores confían en nosotros cada año por precios transparentes y vehículos confiables.',
     feat_insured_t:'Flota totalmente asegurada',feat_insured_d:'Cada vehículo incluye cobertura mínima de responsabilidad civil. Exenciones opcionales de daños por colisión disponibles al pagar.',
     feat_price_t:'Precios transparentes',feat_price_d:'El precio que ves es el precio que pagas. Sin recargos sorpresa en aeropuertos ni complementos obligatorios.',
     feat_instant_t:'Confirmación instantánea',feat_instant_d:'Reserva en menos de 2 minutos. Recibe tu voucher de alquiler inmediatamente por correo y SMS.',
@@ -513,31 +513,31 @@ const TRANSLATIONS = {
     locs_airport_tag:'Alquileres en aeropuerto',locs_airport_t:'Recogida sin complicaciones en el aeropuerto',locs_airport_s:'En cada aeropuerto principal de EE. UU., nuestro mostrador está a pasos del reclamo de equipaje.',
     locs_quick_t:'Recogida rápida',locs_quick_d:'Registra en línea para saltarte la fila. Tu auto estará listo con los papeles prellenados.',
     locs_flight_t:'Seguimiento de vuelo',locs_flight_d:'Monitoreamos tu vuelo. ¿Aterrizaje retrasado? Tu reserva se ajusta automáticamente.',
-    locs_return_t:'Devuelve en cualquier lugar',locs_return_d:'Devuelve en cualquier ubicación de DriveAway. Alquileres de ida disponibles entre más de 500 sucursales.',
+    locs_return_t:'Devuelve en cualquier lugar',locs_return_d:'Devuelve en cualquier ubicación de RoarAway. Alquileres de ida disponibles entre más de 500 sucursales.',
     deals_hero_title:'Ofertas y promociones actuales',deals_hero_sub:'Ahorra hasta un 40% en alquileres. Usa un código promocional al pagar.',
     copy_btn:'Copiar',copy_toast:'¡Código copiado!',newsletter_tag:'Mantente informado',newsletter_title:'Recibe ofertas exclusivas por correo',newsletter_sub:'Únete a más de 80.000 viajeros que reciben acceso anticipado a ventas flash.',newsletter_placeholder:'Introduce tu correo electrónico',newsletter_btn:'Suscribirse',newsletter_note:'Sin spam. Cancela en cualquier momento.',newsletter_toast:'¡Suscrito! Revisa tu bandeja de entrada.',
     about_hero_tag:'Fundada en Austin, TX',about_cta_book:'Reservar un auto',about_cta_contact:'Contáctanos',about_story_tag:'Nuestra historia',about_story_title:'De un auto a los 50 estados',
     about_stats_loc:'Ubicaciones de recogida en EE. UU.',about_stats_cust:'Clientes satisfechos / año',about_stats_rat:'Puntuación media de reseñas',about_stats_fee:'Cargos ocultos, nunca',
     about_vals_tag:'Nuestros valores',about_vals_title:'Lo que defendemos',about_vals_sub:'Tres principios que guían cada decisión que tomamos.',
-    about_team_tag:'Equipo directivo',about_team_title:'Las personas detrás de DriveAway',about_team_sub:'Un equipo diverso de operadores, tecnólogos y entusiastas de los viajes.',
-    about_press_tag:'Prensa',about_press_title:'DriveAway en las noticias',about_press_sub:'Premios, artículos y cobertura de los principales medios de EE. UU.',
+    about_team_tag:'Equipo directivo',about_team_title:'Las personas detrás de RoarAway',about_team_sub:'Un equipo diverso de operadores, tecnólogos y entusiastas de los viajes.',
+    about_press_tag:'Prensa',about_press_title:'RoarAway en las noticias',about_press_sub:'Premios, artículos y cobertura de los principales medios de EE. UU.',
     contact_hero_title:'Estamos aquí para ayudarte',contact_hero_sub:'Preguntas, cambios de reserva, asistencia en carretera — contáctanos en cualquier momento.',
     contact_channels_tag:'Contáctanos',contact_channels_t:'Múltiples formas de comunicarte',contact_channels_s:'Elige el canal que mejor te convenga. Estamos disponibles las 24 horas.',
     contact_form_title:'Envíanos un mensaje',contact_form_sub:'Respondemos todas las consultas en 4 horas hábiles.',
     contact_fname:'Nombre',contact_lname:'Apellido',contact_email:'Correo electrónico',contact_phone:'Número de teléfono',contact_booking:'Nº de confirmación de reserva (opcional)',contact_topic:'Asunto',contact_message:'Mensaje',contact_send:'Enviar mensaje →',
     contact_privacy:'Al enviar este formulario aceptas nuestra',contact_privacy_link:'Política de privacidad',
-    contact_faq_tag:'Preguntas frecuentes',contact_faq_title:'Preguntas frecuentes',contact_faq_sub:'Respuestas rápidas a las preguntas más comunes sobre alquilar con DriveAway.',
+    contact_faq_tag:'Preguntas frecuentes',contact_faq_title:'Preguntas frecuentes',contact_faq_sub:'Respuestas rápidas a las preguntas más comunes sobre alquilar con RoarAway.',
     contact_manage:'¿Necesitas gestionar una reserva?',contact_manage_d:'Inicia sesión en tu cuenta o usa tu número de confirmación para modificar, cancelar o ampliar tu reserva.',contact_manage_btn:'Gestionar mi reserva',
-    contact_cta_t:'¿Todavía tienes preguntas?',contact_cta_s:'Nuestro equipo está disponible 24/7 por teléfono y chat.',contact_cta_btn:'Llamar al 1-800-DRIVEAWAY',
+    contact_cta_t:'¿Todavía tienes preguntas?',contact_cta_s:'Nuestro equipo está disponible 24/7 por teléfono y chat.',contact_cta_btn:'Llamar al 1-800-RoarAway',
     footer_tagline:"El alquiler de autos más transparente de América.<br>500+ ubicaciones. Los 50 estados.",
     footer_rent:'Alquilar',footer_economy:'Autos económicos',footer_suvs:'SUVs y crossovers',footer_luxury:'Vehículos de lujo',footer_electric:'Autos eléctricos',footer_trucks:'Camionetas pickup',footer_vans:'Furgonetas y minivans',
     footer_company:'Empresa',footer_about:'Sobre nosotros',footer_careers:'Empleo',footer_press:'Prensa',footer_partner:'Programa de socios',footer_corporate:'Alquiler corporativo',
     footer_support:'Soporte',footer_help:'Centro de ayuda',footer_booking:'Gestionar reserva',footer_roadside:'Asistencia en carretera',footer_access:'Accesibilidad',footer_privacy:'Política de privacidad',footer_terms:'Términos de uso',
-    footer_copy:'© 2025 DriveAway, Inc. Todos los derechos reservados.',footer_legal:'Registrado en DOT | Acreditado por BBB',
+    footer_copy:'© 2025 RoarAway, Inc. Todos los derechos reservados.',footer_legal:'Registrado en DOT | Acreditado por BBB',
     cta_not_sure_t:'¿No estás seguro de qué auto elegir?',cta_not_sure_s:'Nuestro equipo puede ayudarte a elegir el vehículo adecuado. Llama o chatea 24/7.',
     cta_talk:'Hablar con nosotros',cta_view_deals:'Ver ofertas actuales',cta_pick_city_t:'Elige tu ciudad y sal a la carretera',cta_pick_city_s:'Busca disponibilidad en más de 500 ubicaciones en EE. UU.',
     cta_find_cars:'Buscar autos cerca de mí',cta_contact_br:'Contactar una sucursal',cta_save_t:'¿Listo para ahorrar?',cta_save_s:'Explora los autos disponibles y aplica tu código promocional al pagar.',
-    cta_browse:'Explorar autos',cta_join_t:'Únete a la familia DriveAway',cta_join_s:'Contratamos en todo EE. UU. Consulta puestos vacantes o simplemente reserva tu próximo auto.',cta_careers:'Ver empleos',
+    cta_browse:'Explorar autos',cta_join_t:'Únete a la familia RoarAway',cta_join_s:'Contratamos en todo EE. UU. Consulta puestos vacantes o simplemente reserva tu próximo auto.',cta_careers:'Ver empleos',
   },
 
   /* ══════════════════════════════════════════════
@@ -553,7 +553,7 @@ const TRANSLATIONS = {
     search_pickup_lbl:'Lieu de prise en charge',search_pickup_date:'Date et heure de prise en charge',search_return_date:'Date et heure de restitution',search_btn:'Rechercher des voitures →',
     trust_reviews:'4,8 / 5 · Plus de 120 000 avis',trust_fees:'Pas de frais cachés',trust_locations:'Plus de 500 agences aux États-Unis',trust_cancel:'Annulation gratuite',trust_roadside:'Assistance routière 24h/24',
     fleet_tag:'Notre flotte',fleet_title:'Des voitures pour chaque voyage',fleet_sub:'Tous les véhicules sont récents, entièrement assurés et prêts à partir.',fleet_view_all:'Voir toutes les voitures →',btn_reserve:'Réserver',per_day:'/jour',
-    feat_tag:'Pourquoi DriveAway',feat_title:'Conçu pour les road trips américains',feat_sub:'Des millions de conducteurs nous font confiance chaque année pour des prix transparents et des véhicules fiables.',
+    feat_tag:'Pourquoi RoarAway',feat_title:'Conçu pour les road trips américains',feat_sub:'Des millions de conducteurs nous font confiance chaque année pour des prix transparents et des véhicules fiables.',
     feat_insured_t:'Flotte entièrement assurée',feat_insured_d:"Chaque véhicule est couvert par la responsabilité civile minimale légale. Options de protection contre les dommages disponibles.",
     feat_price_t:'Prix transparents',feat_price_d:"Le prix affiché est le prix payé. Pas de surcharges aéroportuaires surprises ni d'options obligatoires.",
     feat_instant_t:'Confirmation instantanée',feat_instant_d:'Réservez en moins de 2 minutes. Recevez votre bon de location immédiatement par e-mail et SMS.',
@@ -577,31 +577,31 @@ const TRANSLATIONS = {
     locs_airport_tag:'Locations en aéroport',locs_airport_t:'Prise en charge en aéroport sans tracas',locs_airport_s:'Dans chaque grand aéroport américain, notre comptoir est à quelques pas du tapis à bagages.',
     locs_quick_t:'Prise en charge rapide',locs_quick_d:"Effectuez l'enregistrement en ligne pour éviter la file. Votre voiture sera prête au comptoir.",
     locs_flight_t:'Suivi de vol',locs_flight_d:'Nous surveillons votre vol. Atterrissage retardé ? Votre réservation s\'adapte automatiquement.',
-    locs_return_t:'Restitution partout',locs_return_d:"Restituez dans n'importe quelle agence DriveAway. Locations aller simple disponibles entre plus de 500 sites.",
+    locs_return_t:'Restitution partout',locs_return_d:"Restituez dans n'importe quelle agence RoarAway. Locations aller simple disponibles entre plus de 500 sites.",
     deals_hero_title:'Offres et promotions actuelles',deals_hero_sub:"Économisez jusqu'à 40 % sur les locations. Utilisez un code promo à la caisse.",
     copy_btn:'Copier',copy_toast:'Code copié !',newsletter_tag:'Restez informé',newsletter_title:'Recevez des offres exclusives par e-mail',newsletter_sub:"Rejoignez plus de 80 000 voyageurs qui profitent d'un accès anticipé aux ventes flash.",newsletter_placeholder:'Saisissez votre adresse e-mail',newsletter_btn:"S'abonner",newsletter_note:'Pas de spam. Désabonnement à tout moment.',newsletter_toast:'Abonné ! Vérifiez votre boîte de réception.',
     about_hero_tag:'Fondée à Austin, TX',about_cta_book:'Réserver une voiture',about_cta_contact:'Nous contacter',about_story_tag:'Notre histoire',about_story_title:"D'une voiture à 50 États",
     about_stats_loc:'Points de collecte aux États-Unis',about_stats_cust:'Clients satisfaits / an',about_stats_rat:'Note moyenne',about_stats_fee:'Frais cachés, jamais',
     about_vals_tag:'Nos valeurs',about_vals_title:'Ce pour quoi nous nous battons',about_vals_sub:'Trois principes qui guident chaque décision que nous prenons.',
-    about_team_tag:'Équipe dirigeante',about_team_title:'Les personnes derrière DriveAway',about_team_sub:"Une équipe diversifiée d'opérateurs, de technologues et d'amateurs de road trips.",
-    about_press_tag:'Presse',about_press_title:"DriveAway dans l'actualité",about_press_sub:'Prix, reportages et couverture des principaux médias américains.',
+    about_team_tag:'Équipe dirigeante',about_team_title:'Les personnes derrière RoarAway',about_team_sub:"Une équipe diversifiée d'opérateurs, de technologues et d'amateurs de road trips.",
+    about_press_tag:'Presse',about_press_title:"RoarAway dans l'actualité",about_press_sub:'Prix, reportages et couverture des principaux médias américains.',
     contact_hero_title:'Nous sommes là pour vous aider',contact_hero_sub:'Questions, modifications de réservation, assistance routière — contactez-nous à tout moment.',
     contact_channels_tag:'Nous contacter',contact_channels_t:'Plusieurs façons de nous joindre',contact_channels_s:'Choisissez le canal qui vous convient le mieux. Nous sommes disponibles 24h/24.',
     contact_form_title:'Envoyez-nous un message',contact_form_sub:'Nous répondons à toutes les demandes dans les 4 heures ouvrables.',
     contact_fname:'Prénom',contact_lname:'Nom',contact_email:'Adresse e-mail',contact_phone:'Numéro de téléphone',contact_booking:'N° de confirmation de réservation (facultatif)',contact_topic:'Sujet',contact_message:'Message',contact_send:'Envoyer le message →',
     contact_privacy:'En soumettant ce formulaire, vous acceptez notre',contact_privacy_link:'Politique de confidentialité',
-    contact_faq_tag:'FAQ',contact_faq_title:'Questions fréquemment posées',contact_faq_sub:'Réponses rapides aux questions les plus courantes sur la location avec DriveAway.',
+    contact_faq_tag:'FAQ',contact_faq_title:'Questions fréquemment posées',contact_faq_sub:'Réponses rapides aux questions les plus courantes sur la location avec RoarAway.',
     contact_manage:'Besoin de gérer une réservation ?',contact_manage_d:'Connectez-vous à votre compte ou utilisez votre numéro de confirmation pour modifier, annuler ou prolonger votre réservation.',contact_manage_btn:'Gérer ma réservation',
-    contact_cta_t:'Des questions supplémentaires ?',contact_cta_s:"Notre équipe est disponible 24h/24 par téléphone et chat — nous sommes toujours ravis d'aider.",contact_cta_btn:'Appeler le 1-800-DRIVEAWAY',
+    contact_cta_t:'Des questions supplémentaires ?',contact_cta_s:"Notre équipe est disponible 24h/24 par téléphone et chat — nous sommes toujours ravis d'aider.",contact_cta_btn:'Appeler le 1-800-RoarAway',
     footer_tagline:"La location de voiture la plus transparente d'Amérique.<br>500+ agences. Les 50 États.",
     footer_rent:'Louer',footer_economy:'Voitures économiques',footer_suvs:'SUV & crossovers',footer_luxury:'Voitures de luxe',footer_electric:'Voitures électriques',footer_trucks:'Pick-ups',footer_vans:'Vans & monospaces',
     footer_company:'Entreprise',footer_about:'À propos',footer_careers:'Carrières',footer_press:'Presse',footer_partner:'Programme partenaire',footer_corporate:"Location d'entreprise",
     footer_support:'Assistance',footer_help:"Centre d'aide",footer_booking:'Gérer ma réservation',footer_roadside:'Assistance routière',footer_access:'Accessibilité',footer_privacy:'Politique de confidentialité',footer_terms:"Conditions d'utilisation",
-    footer_copy:'© 2025 DriveAway, Inc. Tous droits réservés.',footer_legal:'Enregistré DOT | Accrédité BBB',
+    footer_copy:'© 2025 RoarAway, Inc. Tous droits réservés.',footer_legal:'Enregistré DOT | Accrédité BBB',
     cta_not_sure_t:'Pas sûr de quel véhicule choisir ?',cta_not_sure_s:'Notre équipe peut vous aider à choisir le bon véhicule. Appelez ou chattez 24h/24.',
     cta_talk:'Nous contacter',cta_view_deals:'Voir les offres actuelles',cta_pick_city_t:'Choisissez votre ville, prenez la route',cta_pick_city_s:'Recherchez la disponibilité dans plus de 500 agences aux États-Unis.',
     cta_find_cars:'Trouver des voitures près de moi',cta_contact_br:'Contacter une agence',cta_save_t:'Prêt à économiser ?',cta_save_s:'Parcourez les voitures disponibles et appliquez votre code promo à la caisse.',
-    cta_browse:'Parcourir les voitures',cta_join_t:'Rejoignez la famille DriveAway',cta_join_s:'Nous recrutons partout aux États-Unis. Consultez les postes ouverts ou réservez votre prochain véhicule.',cta_careers:'Voir les carrières',
+    cta_browse:'Parcourir les voitures',cta_join_t:'Rejoignez la famille RoarAway',cta_join_s:'Nous recrutons partout aux États-Unis. Consultez les postes ouverts ou réservez votre prochain véhicule.',cta_careers:'Voir les carrières',
   }
 };
 
