@@ -485,17 +485,15 @@ const I18N = {
   current: localStorage.getItem('da_lang') || 'en',
 
   t(key) {
-    return TRANSLATIONS[this.current][key] || TRANSLATIONS['en'][key] || key;
+    return (TRANSLATIONS[this.current] && TRANSLATIONS[this.current][key])
+      || TRANSLATIONS['en'][key]
+      || key;
   },
 
   apply() {
     const lang = this.current;
     // Update <html lang>
-    document.documentElement.lang = lang === 'de' ? 'de' : 'en';
-
-    // Update page title
-    const titleEl = document.querySelector('[data-i18n-title]');
-    if (titleEl) document.title = titleEl.dataset.i18nTitle.replace('{lang}', lang === 'de' ? 'DE' : '');
+    document.documentElement.lang = lang;
 
     // Translate all data-i18n elements
     document.querySelectorAll('[data-i18n]').forEach(el => {
@@ -510,9 +508,9 @@ const I18N = {
       }
     });
 
-    // Update lang switcher buttons
-    document.querySelectorAll('.lang-btn').forEach(btn => {
-      btn.classList.toggle('active', btn.dataset.lang === lang);
+    // Sync all dialect selects to current language
+    document.querySelectorAll('.lang-select').forEach(sel => {
+      sel.value = lang;
     });
 
     // Persist
@@ -526,8 +524,8 @@ const I18N = {
 
   init() {
     this.apply();
-    document.querySelectorAll('.lang-btn').forEach(btn => {
-      btn.addEventListener('click', () => this.set(btn.dataset.lang));
+    document.querySelectorAll('.lang-select').forEach(sel => {
+      sel.addEventListener('change', () => this.set(sel.value));
     });
   }
 };
