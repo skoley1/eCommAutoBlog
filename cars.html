@@ -57,27 +57,27 @@
 <!-- PAGE HERO -->
 <div class="page-hero">
   <div class="container">
-    <div class="breadcrumb"><a href="index.html" data-i18n="nav_home">Home</a><span class="breadcrumb-sep">/</span><span>Cars</span></div>
-    <h1>Browse Our Fleet</h1>
-    <p>Late-model vehicles for every budget and road trip. All prices include unlimited mileage.</p>
+    <div class="breadcrumb"><a href="index.html" data-i18n="nav_home">Home</a><span class="breadcrumb-sep">/</span><span data-i18n="nav_cars">Cars</span></div>
+    <h1 data-i18n="cars_hero_title">Browse Our Fleet</h1>
+    <p data-i18n="cars_hero_sub">Late-model vehicles for every budget and road trip. All prices include unlimited mileage.</p>
   </div>
 </div>
 
 <!-- FILTER BAR -->
 <div class="filter-bar">
   <div class="container filter-inner">
-    <button class="filter-btn active" data-filter="all">All Cars</button>
-    <button class="filter-btn" data-filter="economy">Economy</button>
-    <button class="filter-btn" data-filter="compact">Compact</button>
-    <button class="filter-btn" data-filter="suv">SUV</button>
-    <button class="filter-btn" data-filter="luxury">Luxury</button>
-    <button class="filter-btn" data-filter="electric">Electric</button>
-    <button class="filter-btn" data-filter="truck">Truck</button>
-    <button class="filter-btn" data-filter="van">Van</button>
+    <button class="filter-btn active" data-filter="all" data-i18n="filter_all">All Cars</button>
+    <button class="filter-btn" data-filter="economy" data-i18n="filter_economy">Economy</button>
+    <button class="filter-btn" data-filter="compact" data-i18n="filter_compact">Compact</button>
+    <button class="filter-btn" data-filter="suv" data-i18n="filter_suv">SUV</button>
+    <button class="filter-btn" data-filter="luxury" data-i18n="filter_luxury">Luxury</button>
+    <button class="filter-btn" data-filter="electric" data-i18n="filter_electric">Electric</button>
+    <button class="filter-btn" data-filter="truck" data-i18n="filter_truck">Truck</button>
+    <button class="filter-btn" data-filter="van" data-i18n="filter_van">Van</button>
     <select class="filter-select" id="sortSelect">
-      <option value="">Sort: Recommended</option>
-      <option value="price-asc">Price: Low → High</option>
-      <option value="price-desc">Price: High → Low</option>
+      <option value="" data-i18n="sort_recommended">Sort: Recommended</option>
+      <option value="price-asc" data-i18n="sort_price_asc">Price: Low → High</option>
+      <option value="price-desc" data-i18n="sort_price_desc">Price: High → Low</option>
     </select>
   </div>
 </div>
@@ -89,14 +89,14 @@
 
       <!-- SIDEBAR -->
       <aside class="sidebar">
-        <h3>Filter</h3>
+        <h3 data-i18n="sidebar_filter">Filter</h3>
         <div class="sidebar-section">
-          <h4>Daily Price</h4>
+          <h4 data-i18n="sidebar_price">Daily Price</h4>
           <input type="range" min="20" max="300" value="300" id="priceRange" />
           <div class="price-range-display"><span>$20</span><span id="priceMax">$300</span></div>
         </div>
         <div class="sidebar-section">
-          <h4>Seats</h4>
+          <h4 data-i18n="sidebar_seats">Seats</h4>
           <div class="check-list">
             <label class="check-item"><input type="checkbox" checked /> 2 seats</label>
             <label class="check-item"><input type="checkbox" checked /> 4–5 seats</label>
@@ -105,14 +105,14 @@
           </div>
         </div>
         <div class="sidebar-section">
-          <h4>Transmission</h4>
+          <h4 data-i18n="sidebar_trans">Transmission</h4>
           <div class="check-list">
-            <label class="check-item"><input type="checkbox" checked /> Automatic</label>
-            <label class="check-item"><input type="checkbox" checked /> Manual</label>
+            <label class="check-item"><input type="checkbox" checked /> <span data-i18n="sidebar_auto">Automatic</span></label>
+            <label class="check-item"><input type="checkbox" checked /> <span data-i18n="sidebar_manual">Manual</span></label>
           </div>
         </div>
         <div class="sidebar-section">
-          <h4>Features</h4>
+          <h4 data-i18n="sidebar_feats">Features</h4>
           <div class="check-list">
             <label class="check-item"><input type="checkbox" /> GPS / Navigation</label>
             <label class="check-item"><input type="checkbox" /> Child Seat</label>
@@ -122,20 +122,20 @@
           </div>
         </div>
         <div class="sidebar-section">
-          <h4>Fuel Type</h4>
+          <h4 data-i18n="sidebar_fuel">Fuel Type</h4>
           <div class="check-list">
             <label class="check-item"><input type="checkbox" checked /> Gasoline</label>
             <label class="check-item"><input type="checkbox" checked /> Hybrid</label>
             <label class="check-item"><input type="checkbox" checked /> Electric</label>
           </div>
         </div>
-        <button class="btn btn-primary btn-full" style="margin-top:4px">Apply Filters</button>
+        <button class="btn btn-primary btn-full" style="margin-top:4px" data-i18n="sidebar_apply">Apply Filters</button>
       </aside>
 
       <!-- CARS GRID -->
       <div>
         <div class="results-header">
-          <span class="results-count">Showing <strong>12 vehicles</strong> available</span>
+          <span class="results-count"><span data-i18n="results_showing">Showing</span> <strong>12 vehicles</strong> <span data-i18n="results_vehicles">available</span></span>
         </div>
         <div class="cars-grid" id="carsGrid">
 
@@ -208,11 +208,11 @@
 <!-- CTA -->
 <div class="cta-banner">
   <div class="container">
-    <h2>Not Sure Which Car?</h2>
-    <p>Our team can help you pick the right vehicle for your trip. Call or chat 24/7.</p>
+    <h2 data-i18n="cta_not_sure_t">Not Sure Which Car?</h2>
+    <p data-i18n="cta_not_sure_s">Our team can help you pick the right vehicle for your trip. Call or chat 24/7.</p>
     <div class="cta-actions">
-      <a href="contact.html" class="btn btn-primary btn-lg">Talk to Us</a>
-      <a href="deals.html" class="btn btn-outline btn-lg">View Current Deals</a>
+      <a href="contact.html" class="btn btn-primary btn-lg" data-i18n="cta_talk">Talk to Us</a>
+      <a href="deals.html" class="btn btn-outline btn-lg" data-i18n="cta_view_deals">View Current Deals</a>
     </div>
   </div>
 </div>

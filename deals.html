@@ -76,9 +76,9 @@
 <!-- PAGE HERO -->
 <div class="page-hero">
   <div class="container">
-    <div class="breadcrumb"><a href="index.html" data-i18n="nav_home">Home</a><span class="breadcrumb-sep">/</span><span>Deals</span></div>
-    <h1>Current Deals &amp; Promos</h1>
-    <p>Save up to 40% on rentals. Use a promo code at checkout or book a qualifying rate to unlock savings.</p>
+    <div class="breadcrumb"><a href="index.html" data-i18n="nav_home">Home</a><span class="breadcrumb-sep">/</span><span data-i18n="nav_deals">Deals</span></div>
+    <h1 data-i18n="deals_hero_title">Current Deals &amp; Promos</h1>
+    <p data-i18n="deals_hero_sub">Save up to 40% on rentals. Use a promo code at checkout or book a qualifying rate to unlock savings.</p>
   </div>
 </div>
 
@@ -227,14 +227,14 @@
 <section class="section section--gray">
   <div class="container">
     <div class="newsletter-box">
-      <span class="section-tag" style="display:block;text-align:center">Stay Updated</span>
-      <h2 class="section-title" style="font-size:22px;text-align:center">Get Exclusive Deals by Email</h2>
-      <p style="color:var(--muted);font-size:14px;text-align:center">Join 80,000+ travelers who get early access to flash sales and seasonal promos.</p>
+      <span class="section-tag" style="display:block;text-align:center" data-i18n="newsletter_tag">Stay Updated</span>
+      <h2 class="section-title" style="font-size:22px;text-align:center" data-i18n="newsletter_title">Get Exclusive Deals by Email</h2>
+      <p style="color:var(--muted);font-size:14px;text-align:center" data-i18n="newsletter_sub">Join 80,000+ travelers who get early access to flash sales and seasonal promos.</p>
       <form class="newsletter-form" onsubmit="event.preventDefault(); showToast('Subscribed! Check your inbox.')">
-        <input type="email" placeholder="Enter your email address" required />
-        <button type="submit" class="btn btn-primary">Subscribe</button>
+        <input type="email" data-i18n="newsletter_placeholder" placeholder="Enter your email address" required />
+        <button type="submit" class="btn btn-primary" data-i18n="newsletter_btn">Subscribe</button>
       </form>
-      <p class="terms-note">No spam. Unsubscribe any time. We respect your privacy.</p>
+      <p class="terms-note" data-i18n="newsletter_note">No spam. Unsubscribe any time. We respect your privacy.</p>
     </div>
   </div>
 </section>
@@ -242,10 +242,10 @@
 <!-- CTA -->
 <div class="cta-banner">
   <div class="container">
-    <h2>Ready to Save?</h2>
-    <p>Browse available cars and apply your promo code at checkout.</p>
+    <h2 data-i18n="cta_save_t">Ready to Save?</h2>
+    <p data-i18n="cta_save_s">Browse available cars and apply your promo code at checkout.</p>
     <div class="cta-actions">
-      <a href="cars.html" class="btn btn-primary btn-lg">Browse Cars</a>
+      <a href="cars.html" class="btn btn-primary btn-lg" data-i18n="cta_browse">Browse Cars</a>
       <a href="index.html#search" class="btn btn-outline btn-lg" data-i18n="nav_book_now">Book Now</a>
     </div>
   </div>
