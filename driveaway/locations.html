@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Locations — DriveAway Car Rental USA</title>
+<meta name="description" content="500+ DriveAway car rental locations across all 50 US states — airports, downtown hubs, and transit centers.">
+<link rel="stylesheet" href="css/styles.css" />
+<style>
+  .map-placeholder {
+    background: var(--surface);
+    border: 1.5px solid var(--border);
+    border-radius: var(--radius-lg);
+    height: 360px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--muted);
+    margin-bottom: 40px;
+    position: relative;
+    overflow: hidden;
+  }
+  .map-placeholder svg { width: 100%; height: 100%; position: absolute; top: 0; left: 0; }
+  .map-overlay { position: relative; z-index: 2; text-align: center; }
+  .map-overlay h3 { font-size: 18px; font-weight: 700; color: var(--text); margin-bottom: 6px; }
+  .map-overlay p { font-size: 13px; color: var(--muted); }
+  .state-tabs { display:flex; flex-wrap:wrap; gap:6px; margin-bottom:28px; }
+  .state-tab { padding:6px 14px; border-radius:20px; border:1.5px solid var(--border); background:#fff; font-size:12px; font-weight:600; color:var(--muted); cursor:pointer; transition:all 0.15s; }
+  .state-tab:hover, .state-tab.active { background:var(--accent); border-color:var(--accent); color:#fff; }
+  .locations-big-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:18px; }
+  @media(max-width:900px){ .locations-big-grid{ grid-template-columns:1fr 1fr; } }
+  @media(max-width:600px){ .locations-big-grid{ grid-template-columns:1fr; } }
+  .airport-badge { font-size:10px; font-weight:700; background:#eff6ff; color:var(--accent); padding:2px 6px; border-radius:4px; }
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="container navbar-inner">
+    <a href="index.html" class="navbar-logo">Drive<span>Away</span></a>
+    <ul class="navbar-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="cars.html">Cars</a></li>
+      <li><a href="locations.html" class="active">Locations</a></li>
+      <li><a href="deals.html">Deals</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="navbar-actions">
+      <a href="deals.html" class="btn btn-ghost btn-sm">View Deals</a>
+      <a href="index.html#search" class="btn btn-primary btn-sm">Book Now</a>
+    </div>
+    <button class="menu-toggle"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Home</a><span class="breadcrumb-sep">/</span><span>Locations</span></div>
+    <h1>500+ Locations Nationwide</h1>
+    <p>Available at major airports, downtown hubs, train stations, and neighborhood branches across all 50 states.</p>
+  </div>
+</div>
+
+<!-- CONTENT -->
+<section class="section">
+  <div class="container">
+
+    <!-- US MAP SVG (simplified) -->
+    <div class="map-placeholder">
+      <svg viewBox="0 0 960 600" xmlns="http://www.w3.org/2000/svg" fill="none">
+        <!-- Background -->
+        <rect width="960" height="600" fill="#f0f4f8"/>
+        <!-- Simplified US outline blocks per region -->
+        <!-- Pacific Coast -->
+        <rect x="50" y="80" width="90" height="280" rx="8" fill="#dbeafe" stroke="#93c5fd" stroke-width="1.5"/>
+        <text x="95" y="230" font-size="11" fill="#1e40af" font-weight="600" text-anchor="middle">CA / OR / WA</text>
+        <!-- Mountain -->
+        <rect x="155" y="100" width="110" height="250" rx="8" fill="#ede9fe" stroke="#c4b5fd" stroke-width="1.5"/>
+        <text x="210" y="230" font-size="11" fill="#5b21b6" font-weight="600" text-anchor="middle">MT / ID / NV / AZ</text>
+        <!-- Southwest -->
+        <rect x="155" y="360" width="60" height="100" rx="8" fill="#fef3c7" stroke="#fde68a" stroke-width="1.5"/>
+        <text x="185" y="415" font-size="10" fill="#92400e" font-weight="600" text-anchor="middle">NM / CO</text>
+        <!-- Great Plains -->
+        <rect x="280" y="100" width="130" height="260" rx="8" fill="#dcfce7" stroke="#86efac" stroke-width="1.5"/>
+        <text x="345" y="240" font-size="11" fill="#15803d" font-weight="600" text-anchor="middle">TX / OK / KS / NE</text>
+        <!-- Midwest -->
+        <rect x="425" y="80" width="140" height="230" rx="8" fill="#fce7f3" stroke="#f9a8d4" stroke-width="1.5"/>
+        <text x="495" y="205" font-size="11" fill="#9d174d" font-weight="600" text-anchor="middle">MN / WI / IL / MO</text>
+        <!-- Great Lakes -->
+        <rect x="555" y="60" width="100" height="180" rx="8" fill="#e0f2fe" stroke="#7dd3fc" stroke-width="1.5"/>
+        <text x="605" y="155" font-size="10" fill="#0369a1" font-weight="600" text-anchor="middle">MI / OH / IN</text>
+        <!-- Southeast -->
+        <rect x="425" y="325" width="180" height="180" rx="8" fill="#fef9c3" stroke="#fde047" stroke-width="1.5"/>
+        <text x="515" y="420" font-size="11" fill="#854d0e" font-weight="600" text-anchor="middle">FL / GA / AL / MS</text>
+        <!-- Mid-Atlantic -->
+        <rect x="670" y="130" width="120" height="180" rx="8" fill="#f3f4f6" stroke="#d1d5db" stroke-width="1.5"/>
+        <text x="730" y="225" font-size="11" fill="#374151" font-weight="600" text-anchor="middle">NY / NJ / PA / VA</text>
+        <!-- New England -->
+        <rect x="800" y="60" width="100" height="130" rx="8" fill="#fdf2f8" stroke="#f0abfc" stroke-width="1.5"/>
+        <text x="850" y="130" font-size="10" fill="#86198f" font-weight="600" text-anchor="middle">MA / CT / ME</text>
+        <!-- Carolinas / TN -->
+        <rect x="640" y="320" width="150" height="130" rx="8" fill="#f7fee7" stroke="#bef264" stroke-width="1.5"/>
+        <text x="715" y="390" font-size="10" fill="#3f6212" font-weight="600" text-anchor="middle">NC / SC / TN</text>
+        <!-- Alaska/Hawaii -->
+        <rect x="50" y="420" width="80" height="60" rx="8" fill="#dbeafe" stroke="#93c5fd" stroke-width="1.5"/>
+        <text x="90" y="455" font-size="9" fill="#1e40af" font-weight="600" text-anchor="middle">Alaska</text>
+        <rect x="145" y="420" width="60" height="60" rx="8" fill="#dcfce7" stroke="#86efac" stroke-width="1.5"/>
+        <text x="175" y="455" font-size="9" fill="#15803d" font-weight="600" text-anchor="middle">Hawaii</text>
+        <!-- Location pins -->
+        <circle cx="80" cy="200" r="7" fill="#3b82d4"/><circle cx="80" cy="200" r="3" fill="#fff"/>
+        <circle cx="290" cy="380" r="7" fill="#3b82d4"/><circle cx="290" cy="380" r="3" fill="#fff"/>
+        <circle cx="460" cy="380" r="7" fill="#3b82d4"/><circle cx="460" cy="380" r="3" fill="#fff"/>
+        <circle cx="570" cy="160" r="7" fill="#3b82d4"/><circle cx="570" cy="160" r="3" fill="#fff"/>
+        <circle cx="700" cy="180" r="7" fill="#3b82d4"/><circle cx="700" cy="180" r="3" fill="#fff"/>
+        <circle cx="840" cy="100" r="7" fill="#3b82d4"/><circle cx="840" cy="100" r="3" fill="#fff"/>
+        <circle cx="500" cy="230" r="7" fill="#3b82d4"/><circle cx="500" cy="230" r="3" fill="#fff"/>
+        <circle cx="200" cy="300" r="7" fill="#3b82d4"/><circle cx="200" cy="300" r="3" fill="#fff"/>
+        <circle cx="350" cy="250" r="7" fill="#3b82d4"/><circle cx="350" cy="250" r="3" fill="#fff"/>
+        <circle cx="680" cy="360" r="7" fill="#3b82d4"/><circle cx="680" cy="360" r="3" fill="#fff"/>
+        <circle cx="730" cy="440" r="7" fill="#3b82d4"/><circle cx="730" cy="440" r="3" fill="#fff"/>
+        <circle cx="620" cy="140" r="7" fill="#3b82d4"/><circle cx="620" cy="140" r="3" fill="#fff"/>
+      </svg>
+      <div class="map-overlay">
+        <h3>500+ Pickup Points Across the USA</h3>
+        <p>Select a region or city below to view exact locations.</p>
+      </div>
+    </div>
+
+    <!-- STATE FILTER TABS -->
+    <div class="state-tabs">
+      <button class="state-tab active">All States</button>
+      <button class="state-tab">CA</button><button class="state-tab">NY</button>
+      <button class="state-tab">TX</button><button class="state-tab">FL</button>
+      <button class="state-tab">IL</button><button class="state-tab">WA</button>
+      <button class="state-tab">CO</button><button class="state-tab">GA</button>
+      <button class="state-tab">NV</button><button class="state-tab">MA</button>
+      <button class="state-tab">AZ</button><button class="state-tab">NC</button>
+      <button class="state-tab">TN</button><button class="state-tab">OR</button>
+      <button class="state-tab">HI</button><button class="state-tab">AK</button>
+    </div>
+
+    <!-- LOCATIONS GRID -->
+    <div class="locations-big-grid">
+
+      <div class="loc-card">
+        <div class="loc-icon">✈</div>
+        <div class="loc-state">NY</div>
+        <div class="loc-city">New York City</div>
+        <div class="loc-spots"><span class="airport-badge">Airport</span> JFK · LGA · EWR</div>
+        <div class="loc-spots" style="margin-top:4px">Midtown · Brooklyn · Newark</div>
+      </div>
+
+      <div class="loc-card">
+        <div class="loc-icon">✈</div>
+        <div class="loc-state">CA</div>
+        <div class="loc-city">Los Angeles</div>
+        <div class="loc-spots"><span class="airport-badge">Airport</span> LAX · BUR · LGB</div>
+        <div class="loc-spots" style="margin-top:4px">Hollywood · Santa Monica · Burbank</div>
+      </div>
+
+      <div class="loc-card">
+        <div class="loc-icon">✈</div>
+        <div class="loc-state">IL</div>
+        <div class="loc-city">Chicago</div>
+        <div class="loc-spots"><span class="airport-badge">Airport</span> ORD · MDW</div>
+        <div class="loc-spots" style="margin-top:4px">The Loop · Naperville · Evanston</div>
+      </div>
+
+      <div class="loc-card">
+        <div class="loc-icon">✈</div>
+        <div class="loc-state">FL</div>
+        <div class="loc-city">Miami</div>
+        <div class="loc-spots"><span class="airport-badge">Airport</span> MIA · FLL · PBI</div>
+        <div class="loc-spots" style="margin-top:4px">South Beach · Brickell · Coral Gables</div>
+      </div>
+
+      <div class="loc-card">
+        <div class="loc-icon">✈</div>
+        <div class="loc-state">TX</div>
+        <div class="loc-city">Houston</div>
+        <div class="loc-spots"><span class="airport-badge">Airport</span> IAH · HOU</div>
+        <div class="loc-spots" style="margin-top:4px">Downtown · Galleria · Katy</div>
+      </div>
+
+      <div class="loc-card">
+        <div class="loc-icon">✈</div>
+        <div class="loc-state">TX</div>
+        <div class="loc-city">Dallas / Fort Worth</div>
+        <div class="loc-spots"><span class="airport-badge">Airport</span> DFW · DAL</div>
+        <div class="loc-spots" style="margin-top:4px">Uptown · Plano · Arlington</div>
+      </div>
+
+      <div class="loc-card">
+        <div class="loc-icon">✈</div>
+        <div class="loc-state">NV</div>
+        <div class="loc-city">Las Vegas</div>
+        <div class="loc-spots"><span class="airport-badge">Airport</span> LAS — Harry Reid Intl</div>
+        <div class="loc-spots" style="margin-top:4px">The Strip · Henderson · Summerlin</div>
+      </div>
+
+      <div class="loc-card">
+        <div class="loc-icon">✈</div>
+        <div class="loc-state">WA</div>
+        <div class="loc-city">Seattle</div>
+        <div class="loc-spots"><span class="airport-badge">Airport</span> SEA — Sea-Tac</div>
+        <div class="loc-spots" style="margin-top:4px">Downtown · Bellevue · Tacoma</div>
+      </div>
+
+      <div class="loc-card">
+        <div class="loc-icon">✈</div>
+        <div class="loc-state">CO</div>
+        <div class="loc-city">Denver</div>
+        <div class="loc-spots"><span class="airport-badge">Airport</span> DEN</div>
+        <div class="loc-spots" style="margin-top:4px">Downtown · Boulder · Aurora</div>
+      </div>
+
+      <div class="loc-card">
+        <div class="loc-icon">✈</div>
+        <div class="loc-state">GA</div>
+        <div class="loc-city">Atlanta</div>
+        <div class="loc-spots"><span class="airport-badge">Airport</span> ATL — Hartsfield-Jackson</div>
+        <div class="loc-spots" style="margin-top:4px">Buckhead · Midtown · Decatur</div>
+      </div>
+
+      <div class="loc-card">
+        <div class="loc-icon">✈</div>
+        <div class="loc-state">MA</div>
+        <div class="loc-city">Boston</div>
+        <div class="loc-spots"><span class="airport-badge">Airport</span> BOS — Logan Intl</div>
+        <div class="loc-spots" style="margin-top:4px">Back Bay · Cambridge · Quincy</div>
+      </div>
+
+      <div class="loc-card">
+        <div class="loc-icon">✈</div>
+        <div class="loc-state">AZ</div>
+        <div class="loc-city">Phoenix</div>
+        <div class="loc-spots"><span class="airport-badge">Airport</span> PHX — Sky Harbor</div>
+        <div class="loc-spots" style="margin-top:4px">Scottsdale · Tempe · Mesa</div>
+      </div>
+
+      <div class="loc-card">
+        <div class="loc-icon">✈</div>
+        <div class="loc-state">CA</div>
+        <div class="loc-city">San Francisco</div>
+        <div class="loc-spots"><span class="airport-badge">Airport</span> SFO · OAK · SJC</div>
+        <div class="loc-spots" style="margin-top:4px">Union Square · Oakland · San Jose</div>
+      </div>
+
+      <div class="loc-card">
+        <div class="loc-icon">✈</div>
+        <div class="loc-state">NC</div>
+        <div class="loc-city">Charlotte</div>
+        <div class="loc-spots"><span class="airport-badge">Airport</span> CLT — Douglas Intl</div>
+        <div class="loc-spots" style="margin-top:4px">Uptown · Ballantyne · Concord</div>
+      </div>
+
+      <div class="loc-card">
+        <div class="loc-icon">✈</div>
+        <div class="loc-state">TN</div>
+        <div class="loc-city">Nashville</div>
+        <div class="loc-spots"><span class="airport-badge">Airport</span> BNA — Nashville Intl</div>
+        <div class="loc-spots" style="margin-top:4px">Broadway · Brentwood · Franklin</div>
+      </div>
+
+      <div class="loc-card">
+        <div class="loc-icon">✈</div>
+        <div class="loc-state">OR</div>
+        <div class="loc-city">Portland</div>
+        <div class="loc-spots"><span class="airport-badge">Airport</span> PDX — Portland Intl</div>
+        <div class="loc-spots" style="margin-top:4px">Pearl District · Beaverton · Hillsboro</div>
+      </div>
+
+      <div class="loc-card">
+        <div class="loc-icon">✈</div>
+        <div class="loc-state">MN</div>
+        <div class="loc-city">Minneapolis</div>
+        <div class="loc-spots"><span class="airport-badge">Airport</span> MSP — Twin Cities</div>
+        <div class="loc-spots" style="margin-top:4px">Downtown · St. Paul · Bloomington</div>
+      </div>
+
+      <div class="loc-card">
+        <div class="loc-icon">✈</div>
+        <div class="loc-state">MI</div>
+        <div class="loc-city">Detroit</div>
+        <div class="loc-spots"><span class="airport-badge">Airport</span> DTW — Metro Wayne</div>
+        <div class="loc-spots" style="margin-top:4px">Downtown · Ann Arbor · Dearborn</div>
+      </div>
+
+      <div class="loc-card">
+        <div class="loc-icon">✈</div>
+        <div class="loc-state">FL</div>
+        <div class="loc-city">Orlando</div>
+        <div class="loc-spots"><span class="airport-badge">Airport</span> MCO</div>
+        <div class="loc-spots" style="margin-top:4px">Theme Park Area · Lake Buena Vista</div>
+      </div>
+
+      <div class="loc-card">
+        <div class="loc-icon">✈</div>
+        <div class="loc-state">HI</div>
+        <div class="loc-city">Honolulu</div>
+        <div class="loc-spots"><span class="airport-badge">Airport</span> HNL — Daniel K. Inouye</div>
+        <div class="loc-spots" style="margin-top:4px">Waikiki · Kailua · Pearl Harbor</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- AIRPORT PERKS -->
+<section class="section section--gray">
+  <div class="container">
+    <span class="section-tag">Airport Rentals</span>
+    <h2 class="section-title">Seamless Airport Pickup</h2>
+    <p class="section-sub">At every major US airport, our counter is steps from baggage claim — no shuttle needed at most locations.</p>
+    <div class="grid-3">
+      <div class="feature-card"><div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div><div class="feature-title">Quick Pickup</div><div class="feature-desc">Pre-check online to bypass the queue. Your car will be ready at the counter with paperwork pre-filled.</div></div>
+      <div class="feature-card"><div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg></div><div class="feature-title">Flight Tracking</div><div class="feature-desc">We monitor your flight. Delayed landing? Your booking adjusts automatically — no fees, no calls needed.</div></div>
+      <div class="feature-card"><div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a2 2 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg></div><div class="feature-title">Return Anywhere</div><div class="feature-desc">Drop off at any DriveAway airport or city location. One-way rentals available between all 500+ sites.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta-banner">
+  <div class="container">
+    <h2>Pick Your City, Hit the Road</h2>
+    <p>Search live availability at any of our 500+ US locations.</p>
+    <div class="cta-actions">
+      <a href="index.html#search" class="btn btn-primary btn-lg">Find Cars Near Me</a>
+      <a href="contact.html" class="btn btn-outline btn-lg">Contact a Branch</a>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer"><div class="container"><div class="footer-grid"><div><div class="footer-logo">Drive<span>Away</span></div><p class="footer-tagline">America's most transparent car rental. 500+ locations. All 50 states.</p></div><div class="footer-col"><h4>Rent</h4><ul><li><a href="cars.html">Economy Cars</a></li><li><a href="cars.html">SUVs</a></li><li><a href="cars.html">Luxury</a></li><li><a href="cars.html">Electric</a></li></ul></div><div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About</a></li><li><a href="contact.html">Careers</a></li></ul></div><div class="footer-col"><h4>Support</h4><ul><li><a href="contact.html">Help Center</a></li><li><a href="#">Privacy</a></li><li><a href="#">Terms</a></li></ul></div></div><div class="footer-bottom"><span>&copy; 2025 DriveAway, Inc.</span><div class="footer-legal"><a href="#">Privacy</a><a href="#">Terms</a></div></div></div></footer>
+
+<script src="js/main.js"></script>
+<script>
+  document.querySelectorAll('.state-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      document.querySelectorAll('.state-tab').forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+    });
+  });
+</script>
+</body>
+</html>

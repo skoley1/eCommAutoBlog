@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>About Us — DriveAway Car Rental USA</title>
+<meta name="description" content="Learn about DriveAway — America's most transparent car rental company, our story, team, and values.">
+<link rel="stylesheet" href="css/styles.css" />
+<style>
+  .about-hero-inner { display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:center; }
+  .about-hero-visual {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: var(--radius-lg);
+    padding: 32px;
+    text-align: center;
+  }
+  .about-hero-visual .big-num { font-size: 60px; font-weight: 900; color: var(--accent); line-height: 1; }
+  .about-hero-visual .big-label { font-size: 13px; color: #94a3b8; margin-top: 4px; }
+  .story-grid { display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:center; }
+  .story-text p { color: var(--muted); margin-bottom: 14px; font-size: 15px; line-height: 1.7; }
+  .timeline { border-left:3px solid var(--border); padding-left:24px; margin-top:8px; }
+  .timeline-item { position:relative; margin-bottom:24px; }
+  .timeline-item::before { content:''; position:absolute; left:-31px; top:5px; width:14px; height:14px; border-radius:50%; background:var(--accent); border:3px solid #fff; box-shadow:0 0 0 2px var(--accent); }
+  .timeline-year { font-size:12px; font-weight:700; color:var(--accent); margin-bottom:2px; }
+  .timeline-event { font-size:14px; font-weight:600; }
+  .timeline-desc { font-size:13px; color:var(--muted); }
+  .stats-band { background:var(--dark); color:#fff; padding:48px 0; }
+  .stats-inner { display:grid; grid-template-columns:repeat(4,1fr); gap:24px; }
+  .team-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:28px; }
+  .value-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+  @media(max-width:900px){ .about-hero-inner,.story-grid{ grid-template-columns:1fr; } .team-grid,.stats-inner{ grid-template-columns:1fr 1fr; } }
+  @media(max-width:600px){ .team-grid,.stats-inner,.value-grid{ grid-template-columns:1fr 1fr; } }
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="container navbar-inner">
+    <a href="index.html" class="navbar-logo">Drive<span>Away</span></a>
+    <ul class="navbar-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="cars.html">Cars</a></li>
+      <li><a href="locations.html">Locations</a></li>
+      <li><a href="deals.html">Deals</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="navbar-actions">
+      <a href="deals.html" class="btn btn-ghost btn-sm">View Deals</a>
+      <a href="index.html#search" class="btn btn-primary btn-sm">Book Now</a>
+    </div>
+    <button class="menu-toggle"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<div class="page-hero" style="padding-bottom:52px">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Home</a><span class="breadcrumb-sep">/</span><span>About</span></div>
+    <div class="about-hero-inner">
+      <div>
+        <h1 style="font-size:40px">We Believe Renting a Car Should Be Simple</h1>
+        <p style="color:#94a3b8;font-size:16px;margin-top:12px;max-width:460px">DriveAway was founded on one idea: no surprises. Clear prices, reliable cars, and humans who actually answer the phone.</p>
+        <div style="margin-top:24px;display:flex;gap:12px;flex-wrap:wrap">
+          <a href="index.html#search" class="btn btn-primary btn-lg">Book a Car</a>
+          <a href="contact.html" class="btn btn-outline btn-lg">Contact Us</a>
+        </div>
+      </div>
+      <div class="about-hero-visual">
+        <div class="big-num">2015</div>
+        <div class="big-label">Founded in Austin, TX</div>
+        <div style="border-top:1px solid rgba(255,255,255,0.1);margin:20px 0"></div>
+        <div style="display:flex;justify-content:space-around">
+          <div><div style="font-size:28px;font-weight:900;color:#fff">500+</div><div style="font-size:11px;color:#64748b">Locations</div></div>
+          <div><div style="font-size:28px;font-weight:900;color:#fff">50</div><div style="font-size:11px;color:#64748b">States</div></div>
+          <div><div style="font-size:28px;font-weight:900;color:#fff">4.8★</div><div style="font-size:11px;color:#64748b">Rating</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- STATS BAND -->
+<div class="stats-band">
+  <div class="container">
+    <div class="stats-inner">
+      <div class="stat-card">
+        <div class="stat-num">500+</div>
+        <div class="stat-label">US Pickup Locations</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">120K+</div>
+        <div class="stat-label">Happy Customers / Year</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">4.8★</div>
+        <div class="stat-label">Average Review Score</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">$0</div>
+        <div class="stat-label">Hidden Fees, Ever</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- OUR STORY -->
+<section class="section">
+  <div class="container">
+    <div class="story-grid">
+      <div class="story-text">
+        <span class="section-tag">Our Story</span>
+        <h2 class="section-title">From One Car to 50 States</h2>
+        <p>DriveAway started in 2015 when our founder, Marcus Webb, returned from a business trip furious about $180 in undisclosed fees on his rental car bill. He knew there had to be a better way.</p>
+        <p>We launched with a single fleet of 12 vehicles in Austin, Texas — with one rule: the quote you see is the total you pay. Word spread fast.</p>
+        <p>By 2019 we had expanded to 50 US cities. Today we operate 500+ locations across all 50 states, and we've served over 1.2 million drivers without ever adding a hidden fee.</p>
+      </div>
+      <div>
+        <div class="timeline">
+          <div class="timeline-item"><div class="timeline-year">2015</div><div class="timeline-event">Founded in Austin, TX</div><div class="timeline-desc">12 vehicles, one rule: no hidden fees.</div></div>
+          <div class="timeline-item"><div class="timeline-year">2017</div><div class="timeline-event">Expanded to 10 Major US Cities</div><div class="timeline-desc">Opened airport counters in NYC, LA, Chicago, Miami, and more.</div></div>
+          <div class="timeline-item"><div class="timeline-year">2019</div><div class="timeline-event">50-City Milestone</div><div class="timeline-desc">Added one-way rentals and 24/7 roadside assistance nationwide.</div></div>
+          <div class="timeline-item"><div class="timeline-year">2021</div><div class="timeline-event">Electric Fleet Launch</div><div class="timeline-desc">First rental company to offer Tesla Model 3 at all major US airports.</div></div>
+          <div class="timeline-item"><div class="timeline-year">2023</div><div class="timeline-event">500+ Locations, All 50 States</div><div class="timeline-desc">Became the fastest-growing car rental brand in the United States.</div></div>
+          <div class="timeline-item"><div class="timeline-year">2025</div><div class="timeline-event">120,000+ Customers Served</div><div class="timeline-desc">Still zero hidden fees. Still 4.8 stars.</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VALUES -->
+<section class="section section--gray">
+  <div class="container">
+    <span class="section-tag">Our Values</span>
+    <h2 class="section-title">What We Stand For</h2>
+    <p class="section-sub">Three principles that guide every decision we make as a company.</p>
+    <div class="value-grid">
+      <div class="feature-card">
+        <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg></div>
+        <div class="feature-title">Radical Transparency</div>
+        <div class="feature-desc">No hidden fees. No bait-and-switch pricing. What you see in the search results is your final total — always.</div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg></div>
+        <div class="feature-title">People Over Process</div>
+        <div class="feature-desc">Real humans answer our phones. Our staff are empowered to fix problems on the spot — no scripts, no escalations.</div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+        <div class="feature-title">Sustainable Driving</div>
+        <div class="feature-desc">We're committed to having 40% of our fleet be electric or hybrid vehicles by 2027 to reduce our carbon footprint.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section class="section">
+  <div class="container">
+    <span class="section-tag">Leadership Team</span>
+    <h2 class="section-title">The People Behind DriveAway</h2>
+    <p class="section-sub">A diverse team of operators, technologists, and road-trip enthusiasts.</p>
+    <div class="team-grid">
+      <div class="team-card">
+        <div class="team-avatar" style="background:#1e3a5f">MW</div>
+        <div class="team-name">Marcus Webb</div>
+        <div class="team-role">Founder &amp; CEO</div>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar" style="background:#4c1d95">KL</div>
+        <div class="team-name">Karen Lim</div>
+        <div class="team-role">Chief Operating Officer</div>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar" style="background:#064e3b">DT</div>
+        <div class="team-name">David Torres</div>
+        <div class="team-role">Chief Technology Officer</div>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar" style="background:#7c2d12">AP</div>
+        <div class="team-name">Ava Patel</div>
+        <div class="team-role">VP of Customer Experience</div>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar" style="background:#1e293b">RJ</div>
+        <div class="team-name">Robert James</div>
+        <div class="team-role">VP of Fleet Operations</div>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar" style="background:#3b1f73">SC</div>
+        <div class="team-name">Sofia Chen</div>
+        <div class="team-role">Head of Sustainability</div>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar" style="background:#155e75">BM</div>
+        <div class="team-name">Brian Mitchell</div>
+        <div class="team-role">Head of Partnerships</div>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar" style="background:#3f3f46">LW</div>
+        <div class="team-name">Lisa Wong</div>
+        <div class="team-role">General Counsel</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRESS -->
+<section class="section section--gray">
+  <div class="container">
+    <span class="section-tag">Press</span>
+    <h2 class="section-title">DriveAway in the News</h2>
+    <p class="section-sub">Awards, features, and coverage from leading US media outlets.</p>
+    <div class="grid-3">
+      <div class="feature-card">
+        <div style="font-size:13px;font-weight:700;color:var(--muted);margin-bottom:8px">Forbes &nbsp;·&nbsp; March 2025</div>
+        <div class="feature-title">"The Most Transparent Rental Company in America"</div>
+        <div class="feature-desc">Forbes named DriveAway the #1 car rental brand for pricing integrity in their annual travel awards.</div>
+      </div>
+      <div class="feature-card">
+        <div style="font-size:13px;font-weight:700;color:var(--muted);margin-bottom:8px">Travel + Leisure &nbsp;·&nbsp; Jan 2025</div>
+        <div class="feature-title">"Best EV Rental Fleet in the US"</div>
+        <div class="feature-desc">T+L recognized DriveAway's electric fleet expansion as the best-in-class for sustainable road travel.</div>
+      </div>
+      <div class="feature-card">
+        <div style="font-size:13px;font-weight:700;color:var(--muted);margin-bottom:8px">USA Today &nbsp;·&nbsp; Nov 2024</div>
+        <div class="feature-title">"The Rental Company That Changed the Game"</div>
+        <div class="feature-desc">A feature on how DriveAway forced the industry to rethink hidden fees and opaque pricing structures.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta-banner">
+  <div class="container">
+    <h2>Join the DriveAway Family</h2>
+    <p>We're hiring across the US. Check open roles or simply book your next rental today.</p>
+    <div class="cta-actions">
+      <a href="contact.html" class="btn btn-primary btn-lg">View Careers</a>
+      <a href="index.html#search" class="btn btn-outline btn-lg">Book a Car</a>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer"><div class="container"><div class="footer-grid"><div><div class="footer-logo">Drive<span>Away</span></div><p class="footer-tagline">America's most transparent car rental. 500+ locations. All 50 states.</p></div><div class="footer-col"><h4>Rent</h4><ul><li><a href="cars.html">Economy</a></li><li><a href="cars.html">SUVs</a></li><li><a href="cars.html">Luxury</a></li><li><a href="cars.html">Electric</a></li></ul></div><div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About</a></li><li><a href="contact.html">Careers</a></li><li><a href="contact.html">Press</a></li></ul></div><div class="footer-col"><h4>Support</h4><ul><li><a href="contact.html">Help</a></li><li><a href="#">Privacy</a></li><li><a href="#">Terms</a></li></ul></div></div><div class="footer-bottom"><span>&copy; 2025 DriveAway, Inc.</span><div class="footer-legal"><a href="#">Privacy</a><a href="#">Terms</a></div></div></div></footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
