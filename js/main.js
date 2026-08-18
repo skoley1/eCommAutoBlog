@@ -97,7 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // ── 24/7 Helpline Chat Widget ─────────────────────
+  // ── 24/7 Buddy Chat Widget ─────────────────────
   (function initChat() {
     const fab     = document.getElementById('chatFab');
     const panel   = document.getElementById('chatPanel');
