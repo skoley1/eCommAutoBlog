@@ -18,7 +18,7 @@ const TRANSLATIONS = {
 
     /* ── HERO ── */
     hero_tag:        '🇺🇸 Serving All 50 States',
-    hero_h1:         'Rent a Car<br>EveryWhere in the <span>USA</span>',
+    hero_h1:         'Rent a Car<br>AnyWhere in the <span>USA</span>',
     hero_sub:        '500+ locations nationwide. Transparent pricing. Free cancellation up to 48 hours before pickup.',
     hero_stat_loc:   'US Locations',
     hero_stat_cust:  'Happy Drivers',
