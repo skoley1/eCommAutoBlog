@@ -132,7 +132,7 @@ const TRANSLATIONS = {
     locs_quick_d:    'Pre-check online to bypass the queue. Your car will be ready at the counter with paperwork pre-filled.',
     locs_flight_t:   'Flight Tracking',
     locs_flight_d:   "We monitor your flight. Delayed landing? Your booking adjusts automatically — no fees, no calls needed.",
-    locs_return_t:   'Return Anywhere',
+    locs_return_t:   'Return EveryWhere',
     locs_return_d:   'Drop off at any RoarAway airport or city location. One-way rentals available between all 500+ sites.',
 
     /* ── DEALS PAGE ── */
