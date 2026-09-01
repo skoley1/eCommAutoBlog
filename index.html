@@ -7,6 +7,8 @@
 <meta name="description" content="Rent a car anywhere in the USA. 500+ locations, no hidden fees, free cancellation. Economy to luxury — book online in minutes.">
 <link rel="stylesheet" href="css/styles.css" />
 <style>
+  /* Hero extras */
+  .hero-ctas { display:flex; gap:12px; justify-content:center; margin-bottom:44px; flex-wrap:wrap; }
   .fleet-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
   @media(max-width:900px){ .fleet-grid{ grid-template-columns:1fr 1fr; } }
   @media(max-width:600px){ .fleet-grid{ grid-template-columns:1fr; } }
@@ -14,21 +16,13 @@
 </head>
 <body>
 
-<!-- TOP PROMO STRIP -->
-<div class="promo-strip">
-  <div class="promo-strip-inner container">
-    <span class="promo-strip-text">☀️ Summer Sale — Save up to 30% on weekly rentals nationwide</span>
-    <a href="deals.html" class="promo-strip-link">View Deals →</a>
-  </div>
-</div>
-
 <!-- NAVBAR -->
 <nav class="navbar">
   <div class="container navbar-inner">
     <a href="index.html" class="navbar-logo">Roar<span>Away</span></a>
     <ul class="navbar-links">
       <li><a href="index.html" class="active" data-i18n="nav_home">Home</a></li>
-      <li><a href="cars.html" data-i18n="nav_cars">Vehicles</a></li>
+      <li><a href="cars.html" data-i18n="nav_cars">Cars</a></li>
       <li><a href="locations.html" data-i18n="nav_locations">Locations</a></li>
       <li><a href="deals.html" data-i18n="nav_deals">Deals</a></li>
       <li><a href="about.html" data-i18n="nav_about">About</a></li>
@@ -43,10 +37,8 @@
           <option value="fr">🇫🇷 Français</option>
         </select>
       </div>
-      <div class="navbar-member">
-        <a href="#" class="navbar-member-link">Sign In</a>
-        <a href="#" class="btn btn-primary btn-sm">Join Now</a>
-      </div>
+      <a href="deals.html" class="btn btn-ghost btn-sm" data-i18n="nav_view_deals">View Deals</a>
+      <a href="#search" class="btn btn-primary btn-sm" data-i18n="nav_book_now">Book Now</a>
     </div>
     <button class="menu-toggle" aria-label="Menu">
       <span></span><span></span><span></span>
@@ -63,50 +55,26 @@
     <span>Washington</span><span>Massachusetts</span><span>Oregon</span>
     <span>Hawaii</span><span>Michigan</span><span>North Carolina</span>
     <span>Virginia</span><span>Tennessee</span><span>Minnesota</span>
-    <span>New York</span><span>California</span><span>Texas</span>
-    <span>Florida</span><span>Illinois</span><span>Nevada</span>
   </div>
 </div>
 
-<!-- HERO BANNER -->
+<!-- HERO -->
 <section class="hero">
-  <div class="hero-image-band">
-    <div class="container hero-content">
-      <div class="hero-eyebrow">🇺🇸 Serving All 50 States</div>
-      <h1 data-i18n="hero_h1" data-i18n-html>Drive America<br>Your Way — <span>RoarAway</span></h1>
-      <p class="hero-sub" data-i18n="hero_sub">500+ locations nationwide. Transparent pricing. Free cancellation up to 48 hours before pickup.</p>
-      <div class="hero-cta-row">
-        <a href="#search" class="btn btn-primary btn-lg">Reserve a Car</a>
-        <a href="cars.html" class="btn btn-outline-white btn-lg">Browse Fleet</a>
-      </div>
-      <div class="hero-stats">
-        <div>
-          <div class="hero-stat-num">500+</div>
-          <div class="hero-stat-label" data-i18n="hero_stat_loc">US Locations</div>
-        </div>
-        <div>
-          <div class="hero-stat-num">120K+</div>
-          <div class="hero-stat-label" data-i18n="hero_stat_cust">Happy Drivers</div>
-        </div>
-        <div>
-          <div class="hero-stat-num">4.8★</div>
-          <div class="hero-stat-label" data-i18n="hero_stat_rat">Avg Rating</div>
-        </div>
-        <div>
-          <div class="hero-stat-num">$0</div>
-          <div class="hero-stat-label" data-i18n="hero_stat_fee">Hidden Fees</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- SEARCH WIDGET -->
-<div class="search-section" id="search">
   <div class="container">
-    <div class="search-widget">
+    <div class="hero-tag" data-i18n="hero_tag">🇺🇸 Serving All 50 States</div>
+    <h1 data-i18n="hero_h1" data-i18n-html>Rent a Car<br>EveryWhere in the <span>USA</span></h1>
+    <p data-i18n="hero_sub">500+ locations nationwide. Transparent pricing. Free cancellation up to 48 hours before pickup.</p>
+    <div class="hero-stats">
+      <div><div class="hero-stat-num">500+</div><div class="hero-stat-label" data-i18n="hero_stat_loc">US Locations</div></div>
+      <div><div class="hero-stat-num">120K+</div><div class="hero-stat-label" data-i18n="hero_stat_cust">Happy Drivers</div></div>
+      <div><div class="hero-stat-num">4.8★</div><div class="hero-stat-label" data-i18n="hero_stat_rat">Avg Rating</div></div>
+      <div><div class="hero-stat-num">$0</div><div class="hero-stat-label" data-i18n="hero_stat_fee">Hidden Fees</div></div>
+    </div>
+
+    <!-- SEARCH CARD -->
+    <div class="search-card" id="search">
       <div class="search-tabs">
-        <button class="search-tab active" data-i18n="search_tab_rent">Reserve a Car</button>
+        <button class="search-tab active" data-i18n="search_tab_rent">Rent a Car</button>
         <button class="search-tab" data-i18n="search_tab_oneway">One-Way Rental</button>
         <button class="search-tab" data-i18n="search_tab_monthly">Monthly Rental</button>
       </div>
@@ -129,59 +97,17 @@
           </select>
         </div>
         <div class="form-group">
-          <label data-i18n="search_pickup_date">Pickup Date</label>
+          <label data-i18n="search_pickup_date">Pickup Date &amp; Time</label>
           <input type="date" value="2025-08-10" />
         </div>
         <div class="form-group">
-          <label data-i18n="search_return_date">Return Date</label>
+          <label data-i18n="search_return_date">Return Date &amp; Time</label>
           <input type="date" value="2025-08-17" />
         </div>
-        <div class="search-btn-wrap">
-          <button type="submit" class="btn btn-primary" data-i18n="search_btn">Search Cars</button>
+        <div>
+          <button type="submit" class="btn btn-primary btn-lg btn-full" style="height:44px" data-i18n="search_btn">Search Cars →</button>
         </div>
       </form>
-    </div>
-  </div>
-</div>
-
-<!-- VEHICLE CATEGORY TILES -->
-<section class="category-section">
-  <div class="container">
-    <div style="display:flex; align-items:baseline; justify-content:space-between; margin-bottom:20px; flex-wrap:wrap; gap:8px;">
-      <h2 style="font-size:22px; font-weight:900; text-transform:uppercase; letter-spacing:-0.3px;">Select a Vehicle Type</h2>
-      <a href="cars.html" class="btn btn-dark btn-sm">View All Vehicles</a>
-    </div>
-    <div class="category-tiles">
-      <a href="cars.html" class="category-tile">
-        <div class="cat-icon">🚗</div>
-        <div class="category-tile-name">Economy</div>
-        <div class="category-tile-price">From $35/day</div>
-      </a>
-      <a href="cars.html" class="category-tile">
-        <div class="cat-icon">🚙</div>
-        <div class="category-tile-name">Compact</div>
-        <div class="category-tile-price">From $49/day</div>
-      </a>
-      <a href="cars.html" class="category-tile">
-        <div class="cat-icon">🛻</div>
-        <div class="category-tile-name">SUV</div>
-        <div class="category-tile-price">From $68/day</div>
-      </a>
-      <a href="cars.html" class="category-tile">
-        <div class="cat-icon">⚡</div>
-        <div class="category-tile-name">Electric</div>
-        <div class="category-tile-price">From $99/day</div>
-      </a>
-      <a href="cars.html" class="category-tile">
-        <div class="cat-icon">🏆</div>
-        <div class="category-tile-name">Luxury</div>
-        <div class="category-tile-price">From $129/day</div>
-      </a>
-      <a href="cars.html" class="category-tile">
-        <div class="cat-icon">🚐</div>
-        <div class="category-tile-name">Minivan</div>
-        <div class="category-tile-price">From $95/day</div>
-      </a>
     </div>
   </div>
 </section>
@@ -191,7 +117,7 @@
   <div class="container trust-inner">
     <div class="trust-item">
       <div class="trust-icon"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg></div>
-      <span data-i18n="trust_reviews">4.8 / 5 · 120,000+ Reviews</span>
+      <span data-i18n="trust_reviews">4.8 / 5 &nbsp;·&nbsp; 120,000+ Reviews</span>
     </div>
     <div class="trust-item">
       <div class="trust-icon"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
@@ -222,7 +148,7 @@
 
       <div class="car-card" data-category="economy" data-price="39">
         <div class="car-img">
-          <div class="car-img-badge"><span class="badge badge-yellow">Best Value</span></div>
+          <div class="car-img-badge"><span class="badge badge-green">Best Value</span></div>
           <img src="assets/images/corolla.jpg" alt="Toyota Corolla" loading="lazy" />
         </div>
         <div class="car-body">
@@ -233,14 +159,14 @@
           </div>
           <div class="car-footer">
             <div class="car-price"><span class="price-num">$39</span><span class="price-unit">/day</span><span class="price-old">$52</span></div>
-            <a href="cars.html" class="btn btn-primary btn-sm reserve-btn">Reserve</a>
+            <a href="cars.html" class="btn btn-dark btn-sm reserve-btn">Reserve</a>
           </div>
         </div>
       </div>
 
       <div class="car-card" data-category="suv" data-price="74">
         <div class="car-img">
-          <div class="car-img-badge"><span class="badge badge-dark">Popular</span></div>
+          <div class="car-img-badge"><span class="badge badge-blue">Popular</span></div>
           <img src="assets/images/explorer.jpg" alt="Ford Explorer" loading="lazy" />
         </div>
         <div class="car-body">
@@ -251,14 +177,14 @@
           </div>
           <div class="car-footer">
             <div class="car-price"><span class="price-num">$74</span><span class="price-unit">/day</span><span class="price-old">$95</span></div>
-            <a href="cars.html" class="btn btn-primary btn-sm reserve-btn">Reserve</a>
+            <a href="cars.html" class="btn btn-dark btn-sm reserve-btn">Reserve</a>
           </div>
         </div>
       </div>
 
       <div class="car-card" data-category="luxury" data-price="129">
         <div class="car-img">
-          <div class="car-img-badge"><span class="badge badge-dark">Premium</span></div>
+          <div class="car-img-badge"><span class="badge badge-purple">Premium</span></div>
           <img src="assets/images/bmw5.jpg" alt="BMW 5 Series" loading="lazy" />
         </div>
         <div class="car-body">
@@ -269,7 +195,7 @@
           </div>
           <div class="car-footer">
             <div class="car-price"><span class="price-num">$129</span><span class="price-unit">/day</span><span class="price-old">$170</span></div>
-            <a href="cars.html" class="btn btn-primary btn-sm reserve-btn">Reserve</a>
+            <a href="cars.html" class="btn btn-dark btn-sm reserve-btn">Reserve</a>
           </div>
         </div>
       </div>
@@ -287,7 +213,7 @@
           </div>
           <div class="car-footer">
             <div class="car-price"><span class="price-num">$99</span><span class="price-unit">/day</span><span class="price-old">$125</span></div>
-            <a href="cars.html" class="btn btn-primary btn-sm reserve-btn">Reserve</a>
+            <a href="cars.html" class="btn btn-dark btn-sm reserve-btn">Reserve</a>
           </div>
         </div>
       </div>
@@ -304,7 +230,7 @@
           </div>
           <div class="car-footer">
             <div class="car-price"><span class="price-num">$89</span><span class="price-unit">/day</span></div>
-            <a href="cars.html" class="btn btn-primary btn-sm reserve-btn">Reserve</a>
+            <a href="cars.html" class="btn btn-dark btn-sm reserve-btn">Reserve</a>
           </div>
         </div>
       </div>
@@ -321,14 +247,14 @@
           </div>
           <div class="car-footer">
             <div class="car-price"><span class="price-num">$49</span><span class="price-unit">/day</span></div>
-            <a href="cars.html" class="btn btn-primary btn-sm reserve-btn">Reserve</a>
+            <a href="cars.html" class="btn btn-dark btn-sm reserve-btn">Reserve</a>
           </div>
         </div>
       </div>
 
     </div>
     <div style="text-align:center;margin-top:32px">
-      <a href="cars.html" class="btn btn-dark btn-lg" data-i18n="fleet_view_all">View All Vehicles →</a>
+      <a href="cars.html" class="btn btn-ghost btn-lg" data-i18n="fleet_view_all">View All Cars →</a>
     </div>
   </div>
 </section>
@@ -420,7 +346,7 @@
       <div class="loc-card"><div class="loc-icon">✈</div><div class="loc-state">CO</div><div class="loc-city">Denver</div><div class="loc-spots">DEN · Downtown · Boulder</div></div>
     </div>
     <div style="text-align:center;margin-top:28px">
-      <a href="locations.html" class="btn btn-dark btn-lg" data-i18n="locs_view_all">See All 500+ Locations →</a>
+      <a href="locations.html" class="btn btn-ghost btn-lg" data-i18n="locs_view_all">See All 500+ Locations →</a>
     </div>
   </div>
 </section>
@@ -431,7 +357,7 @@
     <h2 data-i18n="cta_title">Ready to Hit the Road?</h2>
     <p data-i18n="cta_sub">Summer deals active — save up to 30% on weekly rentals nationwide.</p>
     <div class="cta-actions">
-      <a href="#search" class="btn btn-dark btn-lg" data-i18n="cta_book">Reserve Your Car</a>
+      <a href="#search" class="btn btn-primary btn-lg" data-i18n="cta_book">Book Your Car</a>
       <a href="deals.html" class="btn btn-outline btn-lg" data-i18n="cta_deals">View All Deals</a>
     </div>
   </div>
@@ -486,34 +412,42 @@
 </footer>
 
 <!-- 24/7 HELPLINE CHAT WIDGET -->
+<!-- Label tooltip -->
 <div class="chat-label" id="chatLabel">Buddy — 24×7</div>
 
+<!-- Floating action button -->
 <button class="chat-fab" id="chatFab" aria-label="Open buddy chat" aria-expanded="false">
-  <img class="chat-fab-open" src="assets/images/Boblogo.png" alt="Chat" style="width:62px;height:62px;object-fit:cover;border-radius:50%;position:absolute;inset:0;" />
+  <img class="chat-fab-open" src="assets/images/Boblogo.png" alt="Chat" style="width:60px;height:60px;object-fit:cover;border-radius:50%;position:absolute;inset:0;" />
   <svg class="chat-fab-close" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
   <span class="chat-badge" id="chatBadge">1</span>
 </button>
 
+<!-- Chat panel -->
 <div class="chat-panel" id="chatPanel" role="dialog" aria-label="24/7 Helpline Chat" aria-hidden="true">
+
   <div class="chat-header">
-    <div class="chat-avatar">RA</div>
+    <div class="chat-avatar">DA</div>
     <div class="chat-header-info">
       <div class="chat-header-name">RoarAway Helpline</div>
       <div class="chat-header-status">● Online now — 24×7 support</div>
     </div>
   </div>
+
   <div class="chat-messages" id="chatMessages">
     <div class="chat-msg chat-msg--agent">
       <div class="chat-bubble">👋 Hi there! Welcome to RoarAway's 24×7 buddy. How can I assist you today?</div>
       <span class="chat-msg-time">Now</span>
     </div>
   </div>
+
+  <!-- Quick reply chips -->
   <div class="chat-chips" id="chatChips">
     <button class="chat-chip" data-reply="I need help with my booking">Manage Booking</button>
     <button class="chat-chip" data-reply="I need roadside assistance">Roadside Assist</button>
     <button class="chat-chip" data-reply="What are the rental rates?">Rental Rates</button>
     <button class="chat-chip" data-reply="I want to cancel my reservation">Cancel Reservation</button>
   </div>
+
   <div class="chat-input-row">
     <textarea class="chat-input" id="chatInput" placeholder="Type your message…" rows="1" aria-label="Chat message"></textarea>
     <button class="chat-send" id="chatSend" aria-label="Send">

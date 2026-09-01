@@ -26,23 +26,15 @@
   .map-overlay h3 { font-size: 18px; font-weight: 700; color: var(--text); margin-bottom: 6px; }
   .map-overlay p { font-size: 13px; color: var(--muted); }
   .state-tabs { display:flex; flex-wrap:wrap; gap:6px; margin-bottom:28px; }
-  .state-tab { padding:6px 14px; border-radius:2px; border:2px solid var(--border); background:#fff; font-size:12px; font-weight:700; color:var(--muted); cursor:pointer; text-transform:uppercase; letter-spacing:0.4px; transition:all 0.15s; }
-  .state-tab:hover, .state-tab.active { background:var(--yellow); border-color:var(--yellow); color:var(--dark); }
+  .state-tab { padding:6px 14px; border-radius:20px; border:1.5px solid var(--border); background:#fff; font-size:12px; font-weight:600; color:var(--muted); cursor:pointer; transition:all 0.15s; }
+  .state-tab:hover, .state-tab.active { background:var(--accent); border-color:var(--accent); color:#fff; }
   .locations-big-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:18px; }
   @media(max-width:900px){ .locations-big-grid{ grid-template-columns:1fr 1fr; } }
   @media(max-width:600px){ .locations-big-grid{ grid-template-columns:1fr; } }
-  .airport-badge { font-size:10px; font-weight:700; background:var(--yellow-light); color:var(--dark); padding:2px 6px; border-radius:2px; }
+  .airport-badge { font-size:10px; font-weight:700; background:#eff6ff; color:var(--accent); padding:2px 6px; border-radius:4px; }
 </style>
 </head>
 <body>
-
-<!-- TOP PROMO STRIP -->
-<div class="promo-strip">
-  <div class="promo-strip-inner container">
-    <span class="promo-strip-text">☀️ Summer Sale — Save up to 30% on weekly rentals nationwide</span>
-    <a href="deals.html" class="promo-strip-link">View Deals →</a>
-  </div>
-</div>
 
 <!-- NAVBAR -->
 <nav class="navbar">
@@ -50,7 +42,7 @@
     <a href="index.html" class="navbar-logo">Roar<span>Away</span></a>
     <ul class="navbar-links">
       <li><a href="index.html" data-i18n="nav_home">Home</a></li>
-      <li><a href="cars.html" data-i18n="nav_cars">Vehicles</a></li>
+      <li><a href="cars.html" data-i18n="nav_cars">Cars</a></li>
       <li><a href="locations.html" class="active" data-i18n="nav_locations">Locations</a></li>
       <li><a href="deals.html" data-i18n="nav_deals">Deals</a></li>
       <li><a href="about.html" data-i18n="nav_about">About</a></li>
@@ -65,10 +57,8 @@
           <option value="fr">🇫🇷 Français</option>
         </select>
       </div>
-      <div class="navbar-member">
-        <a href="#" class="navbar-member-link">Sign In</a>
-        <a href="#" class="btn btn-primary btn-sm">Join Now</a>
-      </div>
+      <a href="deals.html" class="btn btn-ghost btn-sm" data-i18n="nav_view_deals">View Deals</a>
+      <a href="index.html#search" class="btn btn-primary btn-sm" data-i18n="nav_book_now">Book Now</a>
     </div>
     <button class="menu-toggle"><span></span><span></span><span></span></button>
   </div>
